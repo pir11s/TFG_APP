@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Empresa',
+      title: 'Santander Global Tech',
       theme: AppTheme.themeData,
       home: LoginView(),
     );

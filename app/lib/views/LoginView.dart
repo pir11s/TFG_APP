@@ -1,5 +1,8 @@
-import 'package:flutter/cupertino.dart';
+import 'package:app/services/LoginService.dart';
+import 'package:app/services/NavigatorService.dart';
+import 'package:app/views/SplashScreenView.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:tfg_theme/AppColors.dart';
 
 class LoginView extends StatefulWidget {
@@ -11,6 +14,15 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
 
   final _formKey = GlobalKey<FormState>();
+
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+      await LoginService.getPassword();
+      await LoginService.getUser();
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +52,8 @@ class _LoginViewState extends State<LoginView> {
                         alignment: Alignment.centerLeft,
                         child: TextFormField(
                           style: Theme.of(context).textTheme.bodyText1,
-                          key: Key(''),
-                          initialValue: '',
+                          key: Key(LoginService.user.user),
+                          initialValue: LoginService.user.user,
                           decoration: InputDecoration(
                             hintText: "User",
                                   contentPadding:
@@ -53,7 +65,13 @@ class _LoginViewState extends State<LoginView> {
                                   )
                           ),
                           validator: (value) {
-                            //TODO
+                            if (LoginService.checkUserPatternOK(value!)) {
+                                setState(() {
+                                  LoginService.setUser(value);
+                                });
+                            } else {
+                              return 'Please enter username (Ej: n12345)';
+                            }
                           },
                         ),
                       ),
@@ -70,20 +88,35 @@ class _LoginViewState extends State<LoginView> {
                         alignment: Alignment.centerLeft,
                         child: TextFormField(
                           style: Theme.of(context).textTheme.bodyText1,
-                          key: Key(''),
-                          initialValue: '',
+                          key: Key(LoginService.user.password),
+                          initialValue: LoginService.user.user,
+                          obscureText: LoginService.hidePassword,
                           decoration: InputDecoration(
                             hintText: "Password",
                                   contentPadding:
                                       EdgeInsets.only(top: 20, left: 2),
-                                  suffixIcon: Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 20, right: 2),
-                                    child: Icon(Icons.visibility),
+                                  suffixIcon: IconButton(
+                                   onPressed: () {
+                                      setState(() {
+                                        LoginService.change_hide();
+                                      });
+                                    },
+                                    icon: Padding(
+                                      padding: const EdgeInsets.only(top: 12),
+                                      child: Icon(LoginService.hidePassword
+                                          ? Icons.visibility
+                                          : Icons.visibility_off),
+                                    )
                                   )
                           ),
                           validator: (value) {
-                            //TODO
+                            if (LoginService.checkPasswdNotEmpty(value!)) {
+                              setState(() {
+                                LoginService.setPassword(value);
+                              });
+                            } else {
+                              return 'Please enter your password';
+                            }
                           },
                         ),
                       ),
@@ -98,8 +131,11 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                         Checkbox(
                             //todo
-                            value: true,
+                            value: LoginService.rememberMe,
                            onChanged: (_) {
+                             setState(() {
+                               LoginService.change_remember();
+                             });
                             }
                         ),
                         Text(
@@ -123,7 +159,38 @@ class _LoginViewState extends State<LoginView> {
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold)
                               ),
-                            onPressed: () {} 
+                            onPressed: () {
+                              if (_formKey.currentState!.validate()) {
+                                setState(() {
+                                  if ( LoginService.authenticate_user()) {
+                                    if (LoginService.rememberMe == true) {
+                                          
+                                        } else {
+                                          
+                                        }
+                                     SantanderNavigate
+                                            .navigateWithFadeWithReplacement(
+                                                context,
+                                                objective: MySplash(
+                                                  title: "CoE Full Stack",
+                                                ));
+                                  } else {
+                                    Fluttertoast.showToast(
+                                            msg:
+                                                "Can't login. Please check username/password.",
+                                            toastLength: Toast.LENGTH_LONG,
+                                            gravity: ToastGravity.CENTER,
+                                            backgroundColor: Colors.red,
+                                            textColor: AppColors.color5,
+                                            timeInSecForIosWeb: 2,
+                                            webPosition: "center",
+                                            webBgColor: "#cccccc",
+                                            fontSize: 16.0);
+                                  }
+                                  
+                                });
+                              }
+                            } 
                           )
                         )
                       ])
