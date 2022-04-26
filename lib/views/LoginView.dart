@@ -1,5 +1,6 @@
 import 'package:app/services/LoginService.dart';
 import 'package:app/services/NavigatorService.dart';
+import 'package:app/services/TechnologyService.dart';
 import 'package:app/views/SplashScreenView.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -20,6 +21,7 @@ class _LoginViewState extends State<LoginView> {
     WidgetsBinding.instance?.addPostFrameCallback((_) async {
       await LoginService.getPassword();
       await LoginService.getUser();
+     
       setState(() {});
     });
   }

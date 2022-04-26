@@ -1,0 +1,32 @@
+{
+     "competences": [
+          {
+               "Competence_Name": "DEVELOPMENT",
+               "Employee_Name": "SAIMA PRUITT"
+          },
+          {
+               "Competence_Name": "DESIGN",
+               "Employee_Name": "BEVERLY HARVEY"
+          },
+          {
+               "Competence_Name": "GOVERNANCE",
+               "Employee_Name": "DRAKE HALLIDAY"
+          },
+          {
+               "Competence_Name": "I+D",
+               "Employee_Name": "LOUIS MOON"
+          },
+          {
+               "Competence_Name": "DATA",
+               "Employee_Name": "AIMIE WARREN"
+          },
+          {
+               "Competence_Name": "SOLUTIONS",
+               "Employee_Name": "LAYLA-MAE OWEN"
+          },
+          {
+               "Competence_Name": "BUSINESS INTELLIGENCE",
+               "Employee_Name": "FARRELL MIRANDA"
+          }
+     ]
+}

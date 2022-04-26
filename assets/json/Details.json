@@ -1,0 +1,1348 @@
+{
+     "employees": [
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 559230369"
+               ],
+               "displayName": "PRUITT SAIMA",
+               "givenName": "SAIMA",
+               "jobTitle": "Specialist I",
+               "mail": "saima@gmail.com",
+               "mobilePhone": "+34 559230369",
+               "officeLocation": "Buxton",
+               "preferredLanguage": null,
+               "surname": "PRUITT",
+               "userPrincipalName": "n145220@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 824356581"
+               ],
+               "displayName": "HARVEY BEVERLY",
+               "givenName": "BEVERLY",
+               "jobTitle": "Specialist II",
+               "mail": "beverly@gmail.com",
+               "mobilePhone": "+34 824356581",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "HARVEY",
+               "userPrincipalName": "n811221@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 921802882"
+               ],
+               "displayName": "HALLIDAY DRAKE",
+               "givenName": "DRAKE",
+               "jobTitle": "Analyst III",
+               "mail": "drake@gmail.com",
+               "mobilePhone": "+34 921802882",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "HALLIDAY",
+               "userPrincipalName": "n327340@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 211820691"
+               ],
+               "displayName": "MOON LOUIS",
+               "givenName": "LOUIS",
+               "jobTitle": "Specialist II",
+               "mail": "louis@gmail.com",
+               "mobilePhone": "+34 211820691",
+               "officeLocation": "Radstock",
+               "preferredLanguage": null,
+               "surname": "MOON",
+               "userPrincipalName": "n802418@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 257023288"
+               ],
+               "displayName": "WARREN AIMIE",
+               "givenName": "AIMIE",
+               "jobTitle": "Specialist I",
+               "mail": "aimie@gmail.com",
+               "mobilePhone": "+34 257023288",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "WARREN",
+               "userPrincipalName": "n044872@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 907804484"
+               ],
+               "displayName": "OWEN LAYLA-MAE",
+               "givenName": "LAYLA-MAE",
+               "jobTitle": "SW Delivery Specialist III",
+               "mail": "layla-mae@gmail.com",
+               "mobilePhone": "+34 907804484",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "OWEN",
+               "userPrincipalName": "n778220@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 875098784"
+               ],
+               "displayName": "MIRANDA FARRELL",
+               "givenName": "FARRELL",
+               "jobTitle": "Analyst I",
+               "mail": "farrell@gmail.com",
+               "mobilePhone": "+34 875098784",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "MIRANDA",
+               "userPrincipalName": "n358446@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 042847489"
+               ],
+               "displayName": "SAUNDERS ARAN",
+               "givenName": "ARAN",
+               "jobTitle": "Analyst I",
+               "mail": "aran@gmail.com",
+               "mobilePhone": "+34 042847489",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "SAUNDERS",
+               "userPrincipalName": "n796102@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 467375598"
+               ],
+               "displayName": "STOKES KIE",
+               "givenName": "KIE",
+               "jobTitle": "Expert I",
+               "mail": "kie@gmail.com",
+               "mobilePhone": "+34 467375598",
+               "officeLocation": "Maghull",
+               "preferredLanguage": null,
+               "surname": "STOKES",
+               "userPrincipalName": "n239547@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 329473099"
+               ],
+               "displayName": "PARKES TAMIKA",
+               "givenName": "TAMIKA",
+               "jobTitle": "Specialist I",
+               "mail": "tamika@gmail.com",
+               "mobilePhone": "+34 329473099",
+               "officeLocation": "Brentford",
+               "preferredLanguage": null,
+               "surname": "PARKES",
+               "userPrincipalName": "n228826@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 225641344"
+               ],
+               "displayName": "TIMMS ISHA",
+               "givenName": "ISHA",
+               "jobTitle": "Specialist II",
+               "mail": "isha@gmail.com",
+               "mobilePhone": "+34 225641344",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "TIMMS",
+               "userPrincipalName": "n159660@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 877117602"
+               ],
+               "displayName": "ALLMAN ISAAK",
+               "givenName": "ISAAK",
+               "jobTitle": "Jr. Analyst",
+               "mail": "isaak@gmail.com",
+               "mobilePhone": "+34 877117602",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "ALLMAN",
+               "userPrincipalName": "n052674@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 282800656"
+               ],
+               "displayName": "NOLAN LIYAH",
+               "givenName": "LIYAH",
+               "jobTitle": "Specialist II",
+               "mail": "liyah@gmail.com",
+               "mobilePhone": "+34 282800656",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "NOLAN",
+               "userPrincipalName": "n306281@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 132535906"
+               ],
+               "displayName": "DUARTE KAILAN",
+               "givenName": "KAILAN",
+               "jobTitle": "Analyst I",
+               "mail": "kailan@gmail.com",
+               "mobilePhone": "+34 132535906",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "DUARTE",
+               "userPrincipalName": "n222915@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 739165914"
+               ],
+               "displayName": "REEVE LILLIE-MAY",
+               "givenName": "LILLIE-MAY",
+               "jobTitle": "Specialist II",
+               "mail": "lillie-may@gmail.com",
+               "mobilePhone": "+34 739165914",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "REEVE",
+               "userPrincipalName": "n496930@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 740767311"
+               ],
+               "displayName": "DEAN ANIYA",
+               "givenName": "ANIYA",
+               "jobTitle": "Analyst III",
+               "mail": "aniya@gmail.com",
+               "mobilePhone": "+34 740767311",
+               "officeLocation": "Brentford",
+               "preferredLanguage": null,
+               "surname": "DEAN",
+               "userPrincipalName": "n145494@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 363268266"
+               ],
+               "displayName": "JEFFERY RAMONE",
+               "givenName": "RAMONE",
+               "jobTitle": "Specialist II",
+               "mail": "ramone@gmail.com",
+               "mobilePhone": "+34 363268266",
+               "officeLocation": "Hitchin",
+               "preferredLanguage": null,
+               "surname": "JEFFERY",
+               "userPrincipalName": "n084567@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 316455605"
+               ],
+               "displayName": "WALLER ALLAN",
+               "givenName": "ALLAN",
+               "jobTitle": "Specialist II",
+               "mail": "allan@gmail.com",
+               "mobilePhone": "+34 316455605",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "WALLER",
+               "userPrincipalName": "n030260@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 125441535"
+               ],
+               "displayName": "MORA MARED",
+               "givenName": "MARED",
+               "jobTitle": "Specialist II",
+               "mail": "mared@gmail.com",
+               "mobilePhone": "+34 125441535",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "MORA",
+               "userPrincipalName": "n487582@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 967823625"
+               ],
+               "displayName": "DOWLING DAVE",
+               "givenName": "DAVE",
+               "jobTitle": "Specialist II",
+               "mail": "dave@gmail.com",
+               "mobilePhone": "+34 967823625",
+               "officeLocation": "Hitchin",
+               "preferredLanguage": null,
+               "surname": "DOWLING",
+               "userPrincipalName": "n799270@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 102631865"
+               ],
+               "displayName": "WILDE CERI",
+               "givenName": "CERI",
+               "jobTitle": "Specialist II",
+               "mail": "ceri@gmail.com",
+               "mobilePhone": "+34 102631865",
+               "officeLocation": "Northfleet",
+               "preferredLanguage": null,
+               "surname": "WILDE",
+               "userPrincipalName": "n974957@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 737620348"
+               ],
+               "displayName": "SANDOVAL FARZANA",
+               "givenName": "FARZANA",
+               "jobTitle": "Specialist I",
+               "mail": "farzana@gmail.com",
+               "mobilePhone": "+34 737620348",
+               "officeLocation": "Sawbridgeworth",
+               "preferredLanguage": null,
+               "surname": "SANDOVAL",
+               "userPrincipalName": "n616525@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 170353548"
+               ],
+               "displayName": "MARKS QUINN",
+               "givenName": "QUINN",
+               "jobTitle": "Expert I",
+               "mail": "quinn@gmail.com",
+               "mobilePhone": "+34 170353548",
+               "officeLocation": "Painswick",
+               "preferredLanguage": null,
+               "surname": "MARKS",
+               "userPrincipalName": "n359386@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 455693200"
+               ],
+               "displayName": "ESPINOSA MADIHAH",
+               "givenName": "MADIHAH",
+               "jobTitle": "Specialist III",
+               "mail": "madihah@gmail.com",
+               "mobilePhone": "+34 455693200",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "ESPINOSA",
+               "userPrincipalName": "n332487@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 996529630"
+               ],
+               "displayName": "COOPER KOBE",
+               "givenName": "KOBE",
+               "jobTitle": "Specialist I",
+               "mail": "kobe@gmail.com",
+               "mobilePhone": "+34 996529630",
+               "officeLocation": "Colchester",
+               "preferredLanguage": null,
+               "surname": "COOPER",
+               "userPrincipalName": "n157729@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 174739876"
+               ],
+               "displayName": "DEACON DIONE",
+               "givenName": "DIONE",
+               "jobTitle": "SW Delivery Specialist I",
+               "mail": "dione@gmail.com",
+               "mobilePhone": "+34 174739876",
+               "officeLocation": "Hitchin",
+               "preferredLanguage": null,
+               "surname": "DEACON",
+               "userPrincipalName": "n906106@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 731595700"
+               ],
+               "displayName": "BERRY ESTHER",
+               "givenName": "ESTHER",
+               "jobTitle": "Analyst II",
+               "mail": "esther@gmail.com",
+               "mobilePhone": "+34 731595700",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "BERRY",
+               "userPrincipalName": "n357328@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 963685362"
+               ],
+               "displayName": "HILTON MARIYAM",
+               "givenName": "MARIYAM",
+               "jobTitle": "Specialist II",
+               "mail": "mariyam@gmail.com",
+               "mobilePhone": "+34 963685362",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "HILTON",
+               "userPrincipalName": "n888731@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 016441636"
+               ],
+               "displayName": "CHASE RUARI",
+               "givenName": "RUARI",
+               "jobTitle": "Specialist II",
+               "mail": "ruari@gmail.com",
+               "mobilePhone": "+34 016441636",
+               "officeLocation": "Brentford",
+               "preferredLanguage": null,
+               "surname": "CHASE",
+               "userPrincipalName": "n231403@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 746307718"
+               ],
+               "displayName": "PREECE CIAN",
+               "givenName": "CIAN",
+               "jobTitle": "Analyst II",
+               "mail": "cian@gmail.com",
+               "mobilePhone": "+34 746307718",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "PREECE",
+               "userPrincipalName": "n837051@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 096819787"
+               ],
+               "displayName": "DAVILA ABUL",
+               "givenName": "ABUL",
+               "jobTitle": "Specialist I",
+               "mail": "abul@gmail.com",
+               "mobilePhone": "+34 096819787",
+               "officeLocation": "Northfleet",
+               "preferredLanguage": null,
+               "surname": "DAVILA",
+               "userPrincipalName": "n232177@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 560927987"
+               ],
+               "displayName": "WOOTEN AINE",
+               "givenName": "AINE",
+               "jobTitle": "Analyst III",
+               "mail": "aine@gmail.com",
+               "mobilePhone": "+34 560927987",
+               "officeLocation": "Newquay",
+               "preferredLanguage": null,
+               "surname": "WOOTEN",
+               "userPrincipalName": "n152691@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 292239205"
+               ],
+               "displayName": "BETTS ISOBELLE",
+               "givenName": "ISOBELLE",
+               "jobTitle": "Specialist II",
+               "mail": "isobelle@gmail.com",
+               "mobilePhone": "+34 292239205",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "BETTS",
+               "userPrincipalName": "n750730@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 116123772"
+               ],
+               "displayName": "GUTHRIE MAXIME",
+               "givenName": "MAXIME",
+               "jobTitle": "Specialist II",
+               "mail": "maxime@gmail.com",
+               "mobilePhone": "+34 116123772",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "GUTHRIE",
+               "userPrincipalName": "n368002@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 723539961"
+               ],
+               "displayName": "FINNEGAN KELLY",
+               "givenName": "KELLY",
+               "jobTitle": "Specialist III",
+               "mail": "kelly@gmail.com",
+               "mobilePhone": "+34 723539961",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "FINNEGAN",
+               "userPrincipalName": "n963587@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 572680820"
+               ],
+               "displayName": "TANG CHE",
+               "givenName": "CHE",
+               "jobTitle": "Specialist II",
+               "mail": "che@gmail.com",
+               "mobilePhone": "+34 572680820",
+               "officeLocation": "Wareham",
+               "preferredLanguage": null,
+               "surname": "TANG",
+               "userPrincipalName": "n941199@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 107032334"
+               ],
+               "displayName": "FROST BRIELLE",
+               "givenName": "BRIELLE",
+               "jobTitle": "Specialist I",
+               "mail": "brielle@gmail.com",
+               "mobilePhone": "+34 107032334",
+               "officeLocation": "Buxton",
+               "preferredLanguage": null,
+               "surname": "FROST",
+               "userPrincipalName": "n126584@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 398094092"
+               ],
+               "displayName": "HOBBS COBY",
+               "givenName": "COBY",
+               "jobTitle": "Analyst III",
+               "mail": "coby@gmail.com",
+               "mobilePhone": "+34 398094092",
+               "officeLocation": "Northfleet",
+               "preferredLanguage": null,
+               "surname": "HOBBS",
+               "userPrincipalName": "n049623@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 132214855"
+               ],
+               "displayName": "KLINE HATTIE",
+               "givenName": "HATTIE",
+               "jobTitle": "Specialist II",
+               "mail": "hattie@gmail.com",
+               "mobilePhone": "+34 132214855",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "KLINE",
+               "userPrincipalName": "n381621@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 265586341"
+               ],
+               "displayName": "DUNN NICOLAS",
+               "givenName": "NICOLAS",
+               "jobTitle": "Analyst I",
+               "mail": "nicolas@gmail.com",
+               "mobilePhone": "+34 265586341",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "DUNN",
+               "userPrincipalName": "n702259@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 205448881"
+               ],
+               "displayName": "DOYLE TOBY",
+               "givenName": "TOBY",
+               "jobTitle": "Analyst III",
+               "mail": "toby@gmail.com",
+               "mobilePhone": "+34 205448881",
+               "officeLocation": "Telford",
+               "preferredLanguage": null,
+               "surname": "DOYLE",
+               "userPrincipalName": "n910261@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 998656480"
+               ],
+               "displayName": "NOVAK AISHAH",
+               "givenName": "AISHAH",
+               "jobTitle": "Analyst I",
+               "mail": "aishah@gmail.com",
+               "mobilePhone": "+34 998656480",
+               "officeLocation": "Telford",
+               "preferredLanguage": null,
+               "surname": "NOVAK",
+               "userPrincipalName": "n111799@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 292262767"
+               ],
+               "displayName": "BRIGGS BAILEY",
+               "givenName": "BAILEY",
+               "jobTitle": "Specialist II",
+               "mail": "bailey@gmail.com",
+               "mobilePhone": "+34 292262767",
+               "officeLocation": "Maghull",
+               "preferredLanguage": null,
+               "surname": "BRIGGS",
+               "userPrincipalName": "n657327@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 596898966"
+               ],
+               "displayName": "HOLMES MAMIE",
+               "givenName": "MAMIE",
+               "jobTitle": "Specialist II",
+               "mail": "mamie@gmail.com",
+               "mobilePhone": "+34 596898966",
+               "officeLocation": "Colchester",
+               "preferredLanguage": null,
+               "surname": "HOLMES",
+               "userPrincipalName": "n782490@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 598073123"
+               ],
+               "displayName": "COLE JAEDEN",
+               "givenName": "JAEDEN",
+               "jobTitle": "Sr. Analyst III",
+               "mail": "jaeden@gmail.com",
+               "mobilePhone": "+34 598073123",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "COLE",
+               "userPrincipalName": "n491141@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 935177300"
+               ],
+               "displayName": "BERNAL DONTE",
+               "givenName": "DONTE",
+               "jobTitle": "Specialist III",
+               "mail": "donte@gmail.com",
+               "mobilePhone": "+34 935177300",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "BERNAL",
+               "userPrincipalName": "n302146@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 836680259"
+               ],
+               "displayName": "LANCASTER YUSEF",
+               "givenName": "YUSEF",
+               "jobTitle": "Expert I",
+               "mail": "yusef@gmail.com",
+               "mobilePhone": "+34 836680259",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "LANCASTER",
+               "userPrincipalName": "n956411@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 246754902"
+               ],
+               "displayName": "CORONA RAJA",
+               "givenName": "RAJA",
+               "jobTitle": "Specialist I",
+               "mail": "raja@gmail.com",
+               "mobilePhone": "+34 246754902",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "CORONA",
+               "userPrincipalName": "n984025@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 551250705"
+               ],
+               "displayName": "ARCHER ZAHID",
+               "givenName": "ZAHID",
+               "jobTitle": "Specialist I",
+               "mail": "zahid@gmail.com",
+               "mobilePhone": "+34 551250705",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "ARCHER",
+               "userPrincipalName": "n927834@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 433524366"
+               ],
+               "displayName": "POPE ZOFIA",
+               "givenName": "ZOFIA",
+               "jobTitle": "Specialist III",
+               "mail": "zofia@gmail.com",
+               "mobilePhone": "+34 433524366",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "POPE",
+               "userPrincipalName": "n301030@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 668646345"
+               ],
+               "displayName": "CLARK YOSEF",
+               "givenName": "YOSEF",
+               "jobTitle": "Analyst III",
+               "mail": "yosef@gmail.com",
+               "mobilePhone": "+34 668646345",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "CLARK",
+               "userPrincipalName": "n805953@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 148497111"
+               ],
+               "displayName": "MCGILL REES",
+               "givenName": "REES",
+               "jobTitle": "Analyst II",
+               "mail": "rees@gmail.com",
+               "mobilePhone": "+34 148497111",
+               "officeLocation": "Yarmouth",
+               "preferredLanguage": null,
+               "surname": "MCGILL",
+               "userPrincipalName": "n974444@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 050547163"
+               ],
+               "displayName": "MCCORMACK TALA",
+               "givenName": "TALA",
+               "jobTitle": "Specialist II",
+               "mail": "tala@gmail.com",
+               "mobilePhone": "+34 050547163",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "MCCORMACK",
+               "userPrincipalName": "n393986@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 279597239"
+               ],
+               "displayName": "ROWLAND TAYYIB",
+               "givenName": "TAYYIB",
+               "jobTitle": "Specialist III",
+               "mail": "tayyib@gmail.com",
+               "mobilePhone": "+34 279597239",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "ROWLAND",
+               "userPrincipalName": "n091978@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 564640658"
+               ],
+               "displayName": "HESTER LYLAH",
+               "givenName": "LYLAH",
+               "jobTitle": "Analyst I",
+               "mail": "lylah@gmail.com",
+               "mobilePhone": "+34 564640658",
+               "officeLocation": "Buxton",
+               "preferredLanguage": null,
+               "surname": "HESTER",
+               "userPrincipalName": "n545953@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 104216569"
+               ],
+               "displayName": "CHAVEZ LYNDA",
+               "givenName": "LYNDA",
+               "jobTitle": "Analyst III",
+               "mail": "lynda@gmail.com",
+               "mobilePhone": "+34 104216569",
+               "officeLocation": "Edgware",
+               "preferredLanguage": null,
+               "surname": "CHAVEZ",
+               "userPrincipalName": "n698857@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 864081913"
+               ],
+               "displayName": "WAGSTAFF BRUCE",
+               "givenName": "BRUCE",
+               "jobTitle": "Specialist III",
+               "mail": "bruce@gmail.com",
+               "mobilePhone": "+34 864081913",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "WAGSTAFF",
+               "userPrincipalName": "n795995@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 639005378"
+               ],
+               "displayName": "DOHERTY ADRIENNE",
+               "givenName": "ADRIENNE",
+               "jobTitle": "Specialist I",
+               "mail": "adrienne@gmail.com",
+               "mobilePhone": "+34 639005378",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "DOHERTY",
+               "userPrincipalName": "n035641@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 034586846"
+               ],
+               "displayName": "FRAME EESHA",
+               "givenName": "EESHA",
+               "jobTitle": "Specialist I",
+               "mail": "eesha@gmail.com",
+               "mobilePhone": "+34 034586846",
+               "officeLocation": "Wareham",
+               "preferredLanguage": null,
+               "surname": "FRAME",
+               "userPrincipalName": "n524034@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 238653753"
+               ],
+               "displayName": "JOYNER AYAZ",
+               "givenName": "AYAZ",
+               "jobTitle": "Specialist II",
+               "mail": "ayaz@gmail.com",
+               "mobilePhone": "+34 238653753",
+               "officeLocation": "Wareham",
+               "preferredLanguage": null,
+               "surname": "JOYNER",
+               "userPrincipalName": "n112316@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 090258297"
+               ],
+               "displayName": "RIVAS SAMMY-JO",
+               "givenName": "SAMMY-JO",
+               "jobTitle": "Specialist I",
+               "mail": "sammy-jo@gmail.com",
+               "mobilePhone": "+34 090258297",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "RIVAS",
+               "userPrincipalName": "n521953@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 253500942"
+               ],
+               "displayName": "JORDAN MONTY",
+               "givenName": "MONTY",
+               "jobTitle": "Specialist II",
+               "mail": "monty@gmail.com",
+               "mobilePhone": "+34 253500942",
+               "officeLocation": "Beverley",
+               "preferredLanguage": null,
+               "surname": "JORDAN",
+               "userPrincipalName": "n285340@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 155607256"
+               ],
+               "displayName": "IBARRA DEVIN",
+               "givenName": "DEVIN",
+               "jobTitle": "Specialist I",
+               "mail": "devin@gmail.com",
+               "mobilePhone": "+34 155607256",
+               "officeLocation": "Buxton",
+               "preferredLanguage": null,
+               "surname": "IBARRA",
+               "userPrincipalName": "n400717@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 239105189"
+               ],
+               "displayName": "LIM NATHANIAL",
+               "givenName": "NATHANIAL",
+               "jobTitle": "Specialist I",
+               "mail": "nathanial@gmail.com",
+               "mobilePhone": "+34 239105189",
+               "officeLocation": "Northfleet",
+               "preferredLanguage": null,
+               "surname": "LIM",
+               "userPrincipalName": "n568709@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 722671107"
+               ],
+               "displayName": "LEON MARIAH",
+               "givenName": "MARIAH",
+               "jobTitle": "Director",
+               "mail": "mariah@gmail.com",
+               "mobilePhone": "+34 722671107",
+               "officeLocation": "Radstock",
+               "preferredLanguage": null,
+               "surname": "LEON",
+               "userPrincipalName": "n059427@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 667729515"
+               ],
+               "displayName": "PROSSER LEWIE",
+               "givenName": "LEWIE",
+               "jobTitle": "Analyst II",
+               "mail": "lewie@gmail.com",
+               "mobilePhone": "+34 667729515",
+               "officeLocation": "Beverley",
+               "preferredLanguage": null,
+               "surname": "PROSSER",
+               "userPrincipalName": "n503955@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 876305499"
+               ],
+               "displayName": "SCHNEIDER EOIN",
+               "givenName": "EOIN",
+               "jobTitle": "Analyst III",
+               "mail": "eoin@gmail.com",
+               "mobilePhone": "+34 876305499",
+               "officeLocation": "Maghull",
+               "preferredLanguage": null,
+               "surname": "SCHNEIDER",
+               "userPrincipalName": "n765537@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 715160267"
+               ],
+               "displayName": "CONLEY NUHA",
+               "givenName": "NUHA",
+               "jobTitle": "Analyst III",
+               "mail": "nuha@gmail.com",
+               "mobilePhone": "+34 715160267",
+               "officeLocation": "Harpenden",
+               "preferredLanguage": null,
+               "surname": "CONLEY",
+               "userPrincipalName": "n543656@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 786574615"
+               ],
+               "displayName": "SUMMERS ARISHA",
+               "givenName": "ARISHA",
+               "jobTitle": "Specialist II",
+               "mail": "arisha@gmail.com",
+               "mobilePhone": "+34 786574615",
+               "officeLocation": "Yeovil",
+               "preferredLanguage": null,
+               "surname": "SUMMERS",
+               "userPrincipalName": "n227527@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 828433138"
+               ],
+               "displayName": "ENRIQUEZ ABIGAYLE",
+               "givenName": "ABIGAYLE",
+               "jobTitle": "Specialist II",
+               "mail": "abigayle@gmail.com",
+               "mobilePhone": "+34 828433138",
+               "officeLocation": "Burnley",
+               "preferredLanguage": null,
+               "surname": "ENRIQUEZ",
+               "userPrincipalName": "n535428@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 130193186"
+               ],
+               "displayName": "PECK RITA",
+               "givenName": "RITA",
+               "jobTitle": "Specialist I",
+               "mail": "rita@gmail.com",
+               "mobilePhone": "+34 130193186",
+               "officeLocation": "Wivenhoe",
+               "preferredLanguage": null,
+               "surname": "PECK",
+               "userPrincipalName": "n926202@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 717055102"
+               ],
+               "displayName": "SOLOMON ANAIS",
+               "givenName": "ANAIS",
+               "jobTitle": "Specialist II",
+               "mail": "anais@gmail.com",
+               "mobilePhone": "+34 717055102",
+               "officeLocation": "Beverley",
+               "preferredLanguage": null,
+               "surname": "SOLOMON",
+               "userPrincipalName": "n670336@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 783562092"
+               ],
+               "displayName": "HOPPER PAWEL",
+               "givenName": "PAWEL",
+               "jobTitle": "Analyst I",
+               "mail": "pawel@gmail.com",
+               "mobilePhone": "+34 783562092",
+               "officeLocation": "Newquay",
+               "preferredLanguage": null,
+               "surname": "HOPPER",
+               "userPrincipalName": "n670717@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 764192923"
+               ],
+               "displayName": "DAVIDSON CHANELLE",
+               "givenName": "CHANELLE",
+               "jobTitle": "OTROS  - Servicios Avanzados",
+               "mail": "chanelle@gmail.com",
+               "mobilePhone": "+34 764192923",
+               "officeLocation": "Painswick",
+               "preferredLanguage": null,
+               "surname": "DAVIDSON",
+               "userPrincipalName": "n309432@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 239494583"
+               ],
+               "displayName": "AYERS DANNI",
+               "givenName": "DANNI",
+               "jobTitle": "Specialist I",
+               "mail": "danni@gmail.com",
+               "mobilePhone": "+34 239494583",
+               "officeLocation": "Telford",
+               "preferredLanguage": null,
+               "surname": "AYERS",
+               "userPrincipalName": "n780753@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 103126777"
+               ],
+               "displayName": "CAMACHO SHANNON",
+               "givenName": "SHANNON",
+               "jobTitle": "Specialist I",
+               "mail": "shannon@gmail.com",
+               "mobilePhone": "+34 103126777",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "CAMACHO",
+               "userPrincipalName": "n142706@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 984800720"
+               ],
+               "displayName": "TORRES MIKEY",
+               "givenName": "MIKEY",
+               "jobTitle": "Mgt & Contr IT Analyst II",
+               "mail": "mikey@gmail.com",
+               "mobilePhone": "+34 984800720",
+               "officeLocation": "Colchester",
+               "preferredLanguage": null,
+               "surname": "TORRES",
+               "userPrincipalName": "n536901@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 393516716"
+               ],
+               "displayName": "BALL SERENITY",
+               "givenName": "SERENITY",
+               "jobTitle": "Analyst II",
+               "mail": "serenity@gmail.com",
+               "mobilePhone": "+34 393516716",
+               "officeLocation": "Telford",
+               "preferredLanguage": null,
+               "surname": "BALL",
+               "userPrincipalName": "n827540@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 489876853"
+               ],
+               "displayName": "LEES ILAYDA",
+               "givenName": "ILAYDA",
+               "jobTitle": "Specialist I",
+               "mail": "ilayda@gmail.com",
+               "mobilePhone": "+34 489876853",
+               "officeLocation": "Newquay",
+               "preferredLanguage": null,
+               "surname": "LEES",
+               "userPrincipalName": "n497387@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 705118543"
+               ],
+               "displayName": "MILLER MANUEL",
+               "givenName": "MANUEL",
+               "jobTitle": "Specialist I",
+               "mail": "manuel@gmail.com",
+               "mobilePhone": "+34 705118543",
+               "officeLocation": "Maghull",
+               "preferredLanguage": null,
+               "surname": "MILLER",
+               "userPrincipalName": "n248973@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 271069931"
+               ],
+               "displayName": "LEIGH JANICE",
+               "givenName": "JANICE",
+               "jobTitle": "Specialist II",
+               "mail": "janice@gmail.com",
+               "mobilePhone": "+34 271069931",
+               "officeLocation": "Wareham",
+               "preferredLanguage": null,
+               "surname": "LEIGH",
+               "userPrincipalName": "n719797@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 122909177"
+               ],
+               "displayName": "WALTON GERALDINE",
+               "givenName": "GERALDINE",
+               "jobTitle": "Specialist I",
+               "mail": "geraldine@gmail.com",
+               "mobilePhone": "+34 122909177",
+               "officeLocation": "Bromley",
+               "preferredLanguage": null,
+               "surname": "WALTON",
+               "userPrincipalName": "n884097@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 387796941"
+               ],
+               "displayName": "WILEY ANISH",
+               "givenName": "ANISH",
+               "jobTitle": "Specialist II",
+               "mail": "anish@gmail.com",
+               "mobilePhone": "+34 387796941",
+               "officeLocation": "Northfleet",
+               "preferredLanguage": null,
+               "surname": "WILEY",
+               "userPrincipalName": "n596147@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          },
+          {
+               "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+               "businessPhones": [
+                    "+34 567650807"
+               ],
+               "displayName": "BUXTON DARCIE-MAE",
+               "givenName": "DARCIE-MAE",
+               "jobTitle": "Specialist III",
+               "mail": "darcie-mae@gmail.com",
+               "mobilePhone": "+34 567650807",
+               "officeLocation": "Brentford",
+               "preferredLanguage": null,
+               "surname": "BUXTON",
+               "userPrincipalName": "n989623@santander.com",
+               "id": "aaaaa-aaaaa-aaaaa-aaaaa"
+          }
+     ]
+}

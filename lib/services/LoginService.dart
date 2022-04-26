@@ -13,6 +13,8 @@ class LoginService {
   static bool hidePassword = true;
   static RegExp userPattern = RegExp('n{1}[0-9]{5}');
 
+  LoginService._();
+
   static bool authenticate_user()  {
     return true;
   }
@@ -23,6 +25,12 @@ class LoginService {
 
   static void change_hide(){
     hidePassword = !hidePassword;
+  }
+
+  static void save_user() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('userName', user.user);
+    prefs.setString('password', user.password);
   }
 
   

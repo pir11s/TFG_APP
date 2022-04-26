@@ -1,4 +1,7 @@
 
+import 'package:app/services/CompetenceService.dart';
+import 'package:app/services/TechnologyService.dart';
+import 'package:app/views/HomeView.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:tfg_theme/AppColors.dart';
@@ -17,10 +20,40 @@ class MySplash extends StatefulWidget {
 }
 
 class _MySplashState extends State<MySplash> {
+
+ 
+
   @override
   void initState() {
     super.initState();
-    
+     WidgetsBinding.instance?.addPostFrameCallback((_) async {
+      await TechnologyService.read_data();
+      await CompetenceService.read_data();
+      setState(() {});
+    });
+
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+            transitionDuration: Duration(milliseconds: 1500),
+            transitionsBuilder: (BuildContext context,
+                Animation<double> animation,
+                Animation<double> secAnimation,
+                Widget child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            pageBuilder: (BuildContext context, Animation<double> animation,
+                Animation<double> secAnimation) {
+              return MyHomePage(
+                title: widget.title,
+              );
+            }),
+      );
+    });
   }
 
   @override
@@ -44,7 +77,7 @@ class _MySplashState extends State<MySplash> {
                         child: Hero(
                           tag: 'CoeLogo',
                           child: Image(
-                            image: ResizeImage(AssetImage("assets/icons/icon.png"),
+                            image: ResizeImage(AssetImage("images/icons/icon.png"),
                                 width: 150, height: 150),
                           ),
                         ),

@@ -1,0 +1,269 @@
+{
+     "competences": [
+          {
+               "Technology": ".NET",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Adobe AEM sites",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Angular",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "APIConnect",
+               "Competence_Name": "DATA",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Apigee",
+               "Competence_Name": "DATA",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Azure Functions",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Azure Logics App",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "Banksphere",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "0"
+          },
+          {
+               "Technology": "Beezy",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "Bloomreach Experience Manager",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "C/C++",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "0"
+          },
+          {
+               "Technology": "DialogFlow",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Docker",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "Drupal",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "eVA",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "0"
+          },
+          {
+               "Technology": "Fatwire",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "0"
+          },
+          {
+               "Technology": "Firebase platform - Firebase Native SDKs ",
+               "Competence_Name": "GOVERNANCE",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Flutter-Dart",
+               "Competence_Name": "GOVERNANCE",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Google Analytics",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Google Tag Manager",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "HTML5",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "IONIC",
+               "Competence_Name": "GOVERNANCE",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Java",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Jenkins",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "JSON",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Kotlin",
+               "Competence_Name": "GOVERNANCE",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Kubernetes (Openshif)",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Liferay",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Microfocus IDOL",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "Microsoft Biztalk Server",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "Microsoft Cognitve Services",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Mulesoft",
+               "Competence_Name": "DATA",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "NodeJS",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Office 365",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "One Trust",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Oracle Content & Experience Cloud",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "PHP",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "Python",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "React",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Spring Boot",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Spring Integration",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "Swagger",
+               "Competence_Name": "DATA",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Swift",
+               "Competence_Name": "GOVERNANCE",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Tealium IQ",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Tech. Lead",
+               "Competence_Name": "BUSINESS INTELLIGENCE",
+               "Industry_Relevance": null
+          },
+          {
+               "Technology": "TIBCO Business Works",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "TIBCO Business Works Container Edition",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "UX Skill Capabilities & Tools",
+               "Competence_Name": "I+D",
+               "Industry_Relevance": null
+          },
+          {
+               "Technology": "Watson",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "Wordpress",
+               "Competence_Name": "DESIGN",
+               "Industry_Relevance": "3"
+          },
+          {
+               "Technology": "XML",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "2"
+          },
+          {
+               "Technology": "XSLT",
+               "Competence_Name": "DEVELOPMENT",
+               "Industry_Relevance": "1"
+          },
+          {
+               "Technology": "YAML",
+               "Competence_Name": "DATA",
+               "Industry_Relevance": "3"
+          }
+     ]
+}
