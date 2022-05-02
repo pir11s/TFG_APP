@@ -1,10 +1,11 @@
 import 'package:app/services/LoginService.dart';
 import 'package:app/services/NavigatorService.dart';
-import 'package:app/services/TechnologyService.dart';
 import 'package:app/views/LoginView.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
+
+import 'CompetencesView.dart';
 ///Home page of whole app.
 ///Defines 4 different pages:
 /// - People: List of people in CoE
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       PageController(initialPage: 0, keepPage: true);
   static List<Widget> _widgetOptions = <Widget>[
     PageContainer(child: Scaffold(body: Center(child:Text('Pagina 1')),)),
-    PageContainer(child: Scaffold(body: Center(child:Text('Pagina 2')),)),
+    PageContainer(child: CompetencesView()),
     PageContainer(child: Scaffold(body: Center(child:Text('Pagina 3')),)),
     PageContainer(child: Scaffold(body: Center(child:Text('Pagina 4')),))
   ];

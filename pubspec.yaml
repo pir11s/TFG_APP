@@ -28,6 +28,7 @@ dependencies:
   http: ^0.13.4
   loading_animations: "^2.1.0"
   shared_preferences: ^2.0.6
+  expandable_text: ^2.2.0
   tfg_theme:
     git:
       url: https://github.com/pir11s/TFG_THEME.git
