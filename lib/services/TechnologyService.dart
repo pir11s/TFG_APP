@@ -7,23 +7,20 @@ import 'package:flutter/services.dart';
 class TechnologyService {
 
   static Map<String,TechnologyModel> technologies = {};
-  
+  static Map<String, List<TechnologyModel>> competenceTechnologies = {};
   TechnologyService._();
 
    static read_data() async {
 
        final String response = await rootBundle.loadString('assets/json/CompetenceTechnologies.json');
         CompetencesTechnologies competencesTechnologies = CompetencesTechnologies.fromJson(jsonDecode(response));
-        var numberOfElements = competencesTechnologies.competences!.length;
-
-        for (var i = 0; i < numberOfElements; i++) {
-          var aux = competencesTechnologies.competences![i];
-          technologies[aux.technology!] =
-            new TechnologyModel(
-              aux.competenceName!, aux.technology!,
-              int.parse(aux.industryRelevance != null ? aux.industryRelevance! : "1")
-              )
-            ;     
+        for (Competences c in competencesTechnologies.competences!) {
+          TechnologyModel t = new TechnologyModel(
+              c.competenceName!, c.technology!,
+              int.parse(c.industryRelevance != null ? c.industryRelevance! : "1")
+              );
+          technologies[c.technology!] = t;
+          competenceTechnologies[c.competenceName!]!.add(t);
         }
 
   }

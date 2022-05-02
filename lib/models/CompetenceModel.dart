@@ -15,9 +15,9 @@ class CompetenceModel {
   List<TechnologyModel> technologies;
   List<PersonModel> members;
 
-  CompetenceModel(this.competenceName, this.competenceLeader,this.description,
-    this.image,this.scope,
-    this.premises,this.complianceImpacts,this.economicModel,this.standardSlas,
-    this.technologies,this.members);
+  CompetenceModel({required this.competenceName, required this.competenceLeader,required this.description,
+    required this.image,required this.scope,
+    required this.premises,required this.complianceImpacts,required this.economicModel,required this.standardSlas,
+    required this.technologies,required this.members});
 
 }

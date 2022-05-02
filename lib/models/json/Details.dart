@@ -30,7 +30,7 @@ class EmployeeDetail {
   String? mail;
   String? mobilePhone;
   String? officeLocation;
-  Null? preferredLanguage;
+  String? preferredLanguage;
   String? surname;
   String? userPrincipalName;
   String? id;

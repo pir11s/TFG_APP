@@ -1,6 +1,8 @@
 import 'package:app/services/LoginService.dart';
 import 'package:app/services/NavigatorService.dart';
 import 'package:app/views/LoginView.dart';
+import 'package:app/views/PeopleView.dart';
+import 'package:app/views/commonWidgets/PageContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
@@ -36,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   PageController _pageController =
       PageController(initialPage: 0, keepPage: true);
   static List<Widget> _widgetOptions = <Widget>[
-    PageContainer(child: Scaffold(body: Center(child:Text('Pagina 1')),)),
+    PageContainer(child: PeopleView()),
     PageContainer(child: CompetencesView()),
     PageContainer(child: Scaffold(body: Center(child:Text('Pagina 3')),)),
     PageContainer(child: Scaffold(body: Center(child:Text('Pagina 4')),))
@@ -140,29 +142,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-}
-
-///Default Container of pages. Defines a standard background color for it's child.
-///
-///Atributes:
-/// - Widget child: child of PageContainer.
-class PageContainer extends StatelessWidget {
-  PageContainer({required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: child),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.white, Color(0x6688c4d5)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomRight,
-          stops: [0.3, 1],
-        ),
-      ),
-    );
-  }
 }

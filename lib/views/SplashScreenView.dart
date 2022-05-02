@@ -1,5 +1,6 @@
 
 import 'package:app/services/CompetenceService.dart';
+import 'package:app/services/PeopleService.dart';
 import 'package:app/services/TechnologyService.dart';
 import 'package:app/views/HomeView.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class _MySplashState extends State<MySplash> {
      WidgetsBinding.instance?.addPostFrameCallback((_) async {
       await TechnologyService.read_data();
       await CompetenceService.read_data();
+      await PeopleService.read_data();
       setState(() {});
     });
 

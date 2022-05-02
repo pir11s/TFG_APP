@@ -4,6 +4,8 @@ import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 
+import 'commonWidgets/PageContainer.dart';
+
 
 ///List of CoE competences. Each competences has a title and related text, plus an image to describe
 ///the competence. If any competence is clicked a CompetenceDetail widget is displayed.
@@ -102,32 +104,6 @@ class _CompetencesState extends State<CompetencesView> {
             linkColor: AppColors.color12,
           )
         ],
-      ),
-    );
-  }
-}
-
-
-  ///Default Container of pages. Defines a standard background color for it's child.
-///
-///Atributes:
-/// - Widget child: child of PageContainer.
-class PageContainer extends StatelessWidget {
-  PageContainer({required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: child),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.white, Color(0x6688c4d5)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomRight,
-          stops: [0.3, 1],
-        ),
       ),
     );
   }

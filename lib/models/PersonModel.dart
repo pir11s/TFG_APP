@@ -21,9 +21,9 @@ class PersonModel {
   List<TechnologyModel> technologies;
   String image;
   String businessPhone;
-  PersonModel(this.user,this.displayName,this.jobTitle,this.mail,this.mobilePhone,
-              this.officeLocation,this.prefferedLanguage,this.surname,this.userPrincipalName,
-              this.id,this.competence,this.function,this.technologies,this.image,this.businessPhone);
+  PersonModel({required this.user, required this.displayName,required this.jobTitle,required this.mail, required this.mobilePhone,
+              required this.officeLocation,required this.prefferedLanguage,required this.surname,required this.userPrincipalName,
+              required this.id,required this.competence,required this.function,required this.technologies,required this.image,required this.businessPhone});
 
 }
 
