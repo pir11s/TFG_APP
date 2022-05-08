@@ -1,7 +1,9 @@
 import 'package:app/services/LoginService.dart';
 import 'package:app/services/NavigatorService.dart';
+import 'package:app/views/KPIsView.dart';
 import 'package:app/views/LoginView.dart';
 import 'package:app/views/PeopleView.dart';
+import 'package:app/views/TechnologiesView.dart';
 import 'package:app/views/commonWidgets/PageContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
@@ -40,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
   static List<Widget> _widgetOptions = <Widget>[
     PageContainer(child: PeopleView()),
     PageContainer(child: CompetencesView()),
-    PageContainer(child: Scaffold(body: Center(child:Text('Pagina 3')),)),
-    PageContainer(child: Scaffold(body: Center(child:Text('Pagina 4')),))
+    PageContainer(child: TechnologyView()),
+    PageContainer(child: KPIsView())
   ];
 
   void _onItemTapped(int index) {
@@ -71,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   WidgetsBinding.instance!.addPostFrameCallback((_) async {
                     await LoginService.deleteUser();
-                    SantanderNavigate.navigateWithFadeWithReplacement(context,
+                    NavigateService.navigateWithFadeWithReplacement(context,
                         objective: LoginView()
                         );
                   });

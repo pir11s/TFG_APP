@@ -16,7 +16,7 @@ class PageContainer extends StatelessWidget {
       child: Center(child: child),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.white, Color(0x6688c4d5)],
+          colors: [Colors.white, Color.fromARGB(102, 237, 244, 248)],
           begin: Alignment.topCenter,
           end: Alignment.bottomRight,
           stops: [0.3, 1],

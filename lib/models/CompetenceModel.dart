@@ -12,12 +12,13 @@ class CompetenceModel {
   String complianceImpacts;
   String economicModel;
   String standardSlas;
-  List<TechnologyModel> technologies;
-  List<PersonModel> members;
+  Map<String,String> technologiesSkillLevel;
+  Map<String,String> technologiesIndustryRelevance;
+  Map<String,String> members;
 
   CompetenceModel({required this.competenceName, required this.competenceLeader,required this.description,
     required this.image,required this.scope,
     required this.premises,required this.complianceImpacts,required this.economicModel,required this.standardSlas,
-    required this.technologies,required this.members});
+    required this.technologiesSkillLevel,required this.technologiesIndustryRelevance, required this.members});
 
 }

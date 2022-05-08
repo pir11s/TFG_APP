@@ -1,9 +1,9 @@
 import 'package:app/services/LoginService.dart';
 import 'package:app/services/NavigatorService.dart';
-import 'package:app/services/TechnologyService.dart';
 import 'package:app/views/SplashScreenView.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:loading_animations/loading_animations.dart';
 import 'package:tfg_theme/AppColors.dart';
 
 class LoginView extends StatefulWidget {
@@ -170,10 +170,10 @@ class _LoginViewState extends State<LoginView> {
                                         } else {
                                           
                                         }
-                                     SantanderNavigate
+                                     NavigateService
                                             .navigateWithFadeWithReplacement(
                                                 context,
-                                                objective: MySplash(
+                                                objective: LoadingScreenView(
                                                   title: "CoE Full Stack",
                                                 ));
                                   } else {

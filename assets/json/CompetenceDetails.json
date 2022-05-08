@@ -4,7 +4,7 @@
             "Competence_Name": "DEVELOPMENT",
             "description":
               "We offer a wide range of solutions to facilitate the services provided by the group at the branches network, either developing tailor-made solutions or using any of the existing solutions already available as a product, client architecture, or EAI solutions.\n",
-          "image": "images/competences/front_end_back_end.jpg",
+          "image": "images/competences/Development.jpg",
           "scope": "We work with any of the latest marked technologies.\n",
           "premises":
               "There are no limitations on the ability to receive the service form the Full Stack Web Coex. Each demand is studied and analyzed before giving the best proposal.\n",
@@ -18,7 +18,7 @@
               "Competence_Name": "DESIGN",
               "description":
         "We are focused in E2E Apps deliveries and global reusable components to integrate in existing Apps applying best in class native and hybrid technologies. We have real experience in a variety of line of business such as retail and corporate and all kinds of users, final customers, employees and shareholders.\n​​​​​​​",
-        "image": "images/competences/mobile.jpg",
+        "image": "images/competences/Design.jpeg",
         "scope":
         "We provide the best solution based on our experience in building and delivering Apps and services in the Santander Group, evolve and up and re-skilling aligned with the last market trends and CTO recommendations and reference architecture are key for us and our services.\n We cover development from the native technologies and languages swift, android java and kotlin till the most up to date hybrid frameworks Ionic, react native, we cover the best solution aligned with the needs. We help you to transit from obsolete solutions based on deprecated or non homologated solutions to the most up to date solution with the strongest cybersecurity and maintenance and code quality.\n",
         "premises":
@@ -34,7 +34,7 @@
               "Competence_Name": "GOVERNANCE",
               "description":
         "We offer a variety of solutions for building the best Content Portal based on the latest platforms of the technology stack of the group. Public or private Portal adding collaborative functionalities are on our scope.\n",
-        "image": "images/competences/CMS.jpg",
+        "image": "images/competences/Governance.jpg",
         "scope":
         "Based on our extensive experience on building and delivering Portals in the Santander Group, on the last trends on the market and the CTO recommendations we provide the best solutions.\n We help you to transit from obsolete solutions based on deprecated platforms (Fatwire) to last generation solutions based on SaaS solutions (Adobe Experience Manager, Oracle Experience or O365). We also build solutions with open Source Solutions (Wordpress, Drupal) Configuration or development Cost, term, license cost, infrastructure or Cybersecurity are drivers to be considered on the solution conception.\n All of our solutions bring an analytic Solution based on the Group technologies selected (Google Analytics, Teallium or One Trust). We are referents on the group to implement the mandatory Cookie management feature using tools such as One Trust. We can setup a centralized and analytic solution for any portal.\n",
         "premises":
@@ -50,7 +50,7 @@
               "Competence_Name": "I+D",
               "description":
         "We offer a variety of solutions for building the best Content Portal based on the latest platforms of the technology stack of the group. Public or private Portal adding collaborative functionalities are on our scope.\n",
-        "image": "images/competences/transformation.png",
+        "image": "images/competences/I+D.jpg",
         "scope": "",
         "premises": "",
         "complianceImpacts": "",
@@ -61,7 +61,7 @@
               "Competence_Name": "DATA",
               "description":
               "We offer a multi-purpose UX service for IT Delivery Tower-Santander Global Tech, all internal companies, geographies, and teams; That’s it, the whole Grupo Santander.\n",
-              "image": "images/competences/UX.jpg",
+              "image": "images/competences/Data.png",
               "scope":
               "More than 15 years working for the Corporation has given us full knowledge of Grupo Santander and we’ve gathered experience in all kinds of projects for all countries where Santander is doing business.\n Our multichannel and holistic approach enables us to offer End-to-End global solutions: any services, any channel, and any device. We can work on any kind of project that has a visual interface, with a customer-centric approach: same user, different environments.\n We believe in co-creation as a catalyst: all project stakeholders are involved... Our way of getting things done is by following the cycle “Evaluate – Cooperate – Test”, with a clear service-oriented approach: our main goal is always the USER and therefore we try hard to meet his or her expectations, by using methodologies and objective criteria that guarantee high-quality results. And the technology used in the project is not a key factor in our work, as our solutions are mostly universal. However, we always try to align closely with the development teams to have a more fluent working flow.\n Our multidisciplinary team involves all kinds of roles: Usability Consultants, Information Architects, Designers, Creatives, Interaction Designers, etc. Finally, we’re also proud to have been rewarded with the Nielsen Award for Worlds Best Intranet (both in 2004 and in 2017) and the Celents Model Bank Award 2016 for the new Account Opening Platform, among others recognitions.\n",
               "premises":
@@ -76,7 +76,7 @@
               "Competence_Name": "SOLUTIONS",
               "description":
               "Service to provide capabilities for the design, development and implementation of APIs.\n CoE members carry out their function in a coordinated manner, ensuring that the different initiatives are delivered consistently and with quality, through standard processes and competent professionals.\n",
-              "image": "images/competences/API.jpg",
+              "image": "images/competences/Solutions.jpg",
               "scope":
               "We have a great experience transforming banking middleware to an API first design framed under Santander BIAN paradigm.\n CoE professionals implement BaaS banking functions under a three layer model architecture attending:\n    - Systems layer where microservices in the “System layer” prevent a business functions from depending on the systems that processes it.\n     - BaaS layer as cross banking functions\n    - Experience layer for specific orchestrations required by an application.\n We are aligned with APIs government teams and CTO APIs architectures, and specialized in the technologies framed under the APIs Santander reference architectures.\n",
               "premises":
@@ -91,7 +91,7 @@
               "Competence_Name": "BUSINESS INTELLIGENCE",
               "description":
               "We offer a global ATM solution, ADH  (Alhambra Device Handler) which is a global middleware solution for ATMs owned by Santander group. It is made up of a set of SW components that communicate with each other using a J2EE architecture and that supports both business applications and the operational management of the ATM or SELF-SERVICE terminals approved and certified for the solution.\n",
-              "image": "images/competences/ATM.jpg",
+              "image": "images/competences/BusinessIntelligence.jpeg",
               "scope":
               "We provide the best solutions based on our extensive experience on developing, building and delivering ATMs SW in Santander Group Banks following on the last trends on the market and the CTO recommendations.\n",
         "premises":

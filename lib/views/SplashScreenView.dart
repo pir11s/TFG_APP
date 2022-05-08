@@ -3,6 +3,7 @@ import 'package:app/services/CompetenceService.dart';
 import 'package:app/services/PeopleService.dart';
 import 'package:app/services/TechnologyService.dart';
 import 'package:app/views/HomeView.dart';
+import 'package:app/views/commonWidgets/PageContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:tfg_theme/AppColors.dart';
@@ -11,16 +12,16 @@ import 'package:tfg_theme/AppText.dart';
 
 ///Default page if user is already logged in. Displays for 3 seconds a screen with a loading
 ///animation. If user is not logged in this page will display after log.
-class MySplash extends StatefulWidget {
-  MySplash({Key? key, required this.title}) : super(key: key);
+class LoadingScreenView extends StatefulWidget {
+  LoadingScreenView({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MySplashState createState() => _MySplashState();
+  _LoadingScreenViewState createState() => _LoadingScreenViewState();
 }
 
-class _MySplashState extends State<MySplash> {
+class _LoadingScreenViewState extends State<LoadingScreenView> {
 
  
 
@@ -31,10 +32,12 @@ class _MySplashState extends State<MySplash> {
       await TechnologyService.read_data();
       await CompetenceService.read_data();
       await PeopleService.read_data();
-      setState(() {});
+      setState(() {
+        
+      });
     });
 
-    Future.delayed(const Duration(milliseconds: 3000), () {
+    Future.delayed(const Duration(milliseconds: 7000), () {
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
@@ -133,28 +136,3 @@ class _MySplashState extends State<MySplash> {
   }
 }
 
-
-///Default Container of pages. Defines a standard background color for it's child.
-///
-///Atributes:
-/// - Widget child: child of PageContainer.
-class PageContainer extends StatelessWidget {
-  PageContainer({required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: child),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.white, Color(0x6688c4d5)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomRight,
-          stops: [0.3, 1],
-        ),
-      ),
-    );
-  }
-}

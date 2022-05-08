@@ -28,7 +28,9 @@ dependencies:
   http: ^0.13.4
   loading_animations: "^2.1.0"
   shared_preferences: ^2.0.6
+  url_launcher: ^6.1.0
   expandable_text: ^2.2.0
+  flutter_radar_chart: ^0.2.1
   tfg_theme:
     git:
       url: https://github.com/pir11s/TFG_THEME.git
@@ -39,6 +41,7 @@ dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - images/competences/
     - assets/json/
     - images/icons/
     - images/pages/

@@ -1,5 +1,6 @@
 
 import 'package:app/services/PeopleService.dart';
+import 'package:app/views/PeopleView.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
@@ -28,8 +29,7 @@ class MiniAvatar extends StatelessWidget {
               elevation: 15,
               backgroundColor: AppColors.color4,
             ),
-            //TODO 
-            body: Container(child: Text('a')),
+            body: PersonDetailView(id: id),
           );
         },
       ),

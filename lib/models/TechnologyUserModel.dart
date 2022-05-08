@@ -7,10 +7,10 @@
 ///  - String name: technology name
 ///  - String competence: competence name
 ///  - Int industry relevance: relevance in industry
-class TechnologyModel {
+class TechnologyUserModel {
   String competenceName = '', technologyName = '';
-  int industryRelevance =1;
+  String skillLevel ="";
 
-  TechnologyModel({required this.competenceName,required this.technologyName,required this.industryRelevance});
+  TechnologyUserModel({required this.competenceName, required this.technologyName,required this.skillLevel});
   
 }
