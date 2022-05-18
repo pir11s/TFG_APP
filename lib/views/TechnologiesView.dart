@@ -136,24 +136,12 @@ class TechnologyDetailView extends StatelessWidget {
 
   TechnologyDetailView({required this.technologyName});
 
-  List<Widget> peopleList(String technologyName, bool experts) {
-    List<Widget> tagList = [];
-
-    for (UserKnowledgeModel u in TechnologyService.technologyKnowledges[technologyName]!) {
-        if (TechnologyService.isExpert(technologyName, u.user)) {
-          tagList.add(MiniAvatar(id: PeopleService.getEmployeeByName(u.user).id));
-        } else if (!experts) {
-          tagList.add(MiniAvatar(id: PeopleService.getEmployeeByName(u.user).id));
-        }
-    }
-
-    return tagList;
-  }
+  
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> mainExperts = peopleList(technologyName, true);
-    List<Widget> otherExperts = peopleList(technologyName, false);
+    List<Widget> mainExperts = TechnologyService.getExperts(technologyName);
+    List<Widget> otherExperts = TechnologyService.getPeopleWithKnowledge(technologyName);
 
     return Scaffold(
       backgroundColor: Colors.transparent,

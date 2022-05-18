@@ -4,6 +4,9 @@ import 'package:app/models/TechnologyModel.dart';
 import 'package:app/models/UserKnowledgeModel.dart';
 import 'package:app/models/json/CompetencesTechnologies.dart';
 import 'package:app/models/json/EmployeesTechnologies.dart';
+import 'package:app/services/PeopleService.dart';
+import 'package:app/views/commonWidgets/MiniAvatar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
 class TechnologyService {
@@ -88,6 +91,34 @@ class TechnologyService {
       value += int.parse(element.skillLevel[0]);
     });
     return value /technologyKnowledges[tech]!.length;
+  }
+
+  static List<Widget> getExperts(technologyName) {
+    List<Widget> tagList = [];
+    Set<String> users = {};
+
+    for (UserKnowledgeModel u in TechnologyService.technologyKnowledges[technologyName]!) {
+        if (TechnologyService.isExpert(technologyName, u.user) && !users.contains(u.user) ) {
+          users.add(u.user);
+          tagList.add(MiniAvatar(id: PeopleService.getEmployeeByName(u.user).id));
+        }
+    }
+
+    return tagList;
+  }
+
+  static List<Widget> getPeopleWithKnowledge(String technologyName) {
+    List<Widget> tagList = [];
+    Set<String> users = {};
+    for (UserKnowledgeModel u in TechnologyService.technologyKnowledges[technologyName]!) {
+      
+        if (!TechnologyService.isExpert(technologyName, u.user) && !users.contains(u.user) ) {
+          users.add(u.user);
+          tagList.add(MiniAvatar(id: PeopleService.getEmployeeByName(u.user).id));
+        } 
+    }
+
+    return tagList.toSet().toList();
   }
 
 }
