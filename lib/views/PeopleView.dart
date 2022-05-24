@@ -1,15 +1,10 @@
 import 'package:app/models/PersonModel.dart';
-import 'package:app/models/TechnologyUserModel.dart';
 import 'package:app/services/NavigatorService.dart';
 import 'package:app/services/PeopleService.dart';
-import 'package:app/views/commonWidgets/Buttons.dart';
 import 'package:app/views/commonWidgets/PageContainer.dart';
-import 'package:app/views/commonWidgets/SanChip.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import 'commonWidgets/SearchWidget.dart';
 
 ///List of all members of CoE. Displays a search bar for users and a scrollable
@@ -22,11 +17,11 @@ class PeopleView extends StatefulWidget {
 class _PeopleViewState extends State<PeopleView> {
 
 
-  List<PersonModel> _peopleShown = PeopleService.people;
+  List<PersonModel> _peopleShown = PeopleService.getPeople();
   String _searchText = '';
 
   _peopleSort(String search) {
-    final peopleNew = PeopleService.people.where((person) {
+    final peopleNew = PeopleService.getPeople().where((person) {
       final nameLower = person.displayName.toLowerCase();
       final userLower = person.id.toLowerCase();
       final searchLower = search.toLowerCase();
@@ -36,7 +31,7 @@ class _PeopleViewState extends State<PeopleView> {
     setState(() {
       _searchText = search;
       _peopleShown = peopleNew;
-      print(PeopleService.people.length);
+      print(PeopleService.getPeople().length);
     });
   }
 
@@ -61,7 +56,7 @@ class _PeopleViewState extends State<PeopleView> {
                   subtitle: Text(_peopleShown[index].competence,
                       style: AppText.moduleLinkTitle),
                   leading: Hero(
-                    tag: 'avatar-${PeopleService.people[index].id}',
+                    tag: 'avatar-${PeopleService.getPeople()[index].id}',
                     child: Container(
                             child: CircleAvatar(
                               radius: 25.0,
@@ -93,65 +88,11 @@ class PersonDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     PersonModel person = PeopleService.getEmployeeById(id);
 
-    List<Widget> technologyList(String id) {
-      List<Widget> tagList = [];
+    
 
-      for (TechnologyUserModel t in person.technologies) {
-        
-          tagList.add(GestureDetector(
-            onTap: () {
-              NavigateService.navigateDetailTechnology(t.technologyName, context);
-            },
-            child: Hero(
-              tag: "technology-${t.technologyName}",
-              child: Material(
-                color: Color(0x00000000),
-                child: SanChip(
-                    label: t.technologyName,
-                    highlight: int.parse(t.skillLevel[0]) > 2),
-              ),
-            ),
-          ));
-        
-      }
+    List<Widget> technologiesList = PeopleService.getUserTechnologyList(id,person,context);
 
-      return tagList;
-    }
-
-    List<Widget> technologiesList = technologyList(id);
-
-    List<Widget> _buildContactMethods() {
-      List<Widget> contactMethods = [];
-
-      if (person.mobilePhone != "") {
-      contactMethods.add(SignInButton.mini(
-          buttonType: ButtonType.call,
-          btnColor: Colors.green,
-          buttonSize: ButtonSize.small,
-          onPressed: () {
-            _launchURL("tel:${person.mobilePhone}");
-          }));
-    }
-
-    if (person.mail != "") {
-      contactMethods.add(SignInButton.mini(
-          buttonType: ButtonType.mail,
-          buttonSize: ButtonSize.small,
-          onPressed: () {
-            launchUrl(Uri.parse("mailto:${person.mail}"));
-          }));
-
-      contactMethods.add(SignInButton.mini(
-          buttonType: ButtonType.microsoftTeams,
-          buttonSize: ButtonSize.small,
-          onPressed: () {
-            launchUrl(
-                Uri.parse("msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
-          }));
-    }
-
-      return contactMethods;
-    }
+    
 
     return PageContainer(
       child: ListView(
@@ -235,7 +176,7 @@ class PersonDetailView extends StatelessWidget {
               SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: _buildContactMethods(),
+                children: PeopleService.buildContactMethods(person),
               ),
               SizedBox(height: 5),
             ],
@@ -263,7 +204,6 @@ class PersonDetailView extends StatelessWidget {
     );
   }
 
-  void _launchURL(String url) async =>
-    await canLaunchUrl(Uri.parse(url)) ? await launchUrl(Uri.parse(url)) : throw 'Could not launch $url';
+  
 }
 

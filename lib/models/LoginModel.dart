@@ -7,6 +7,6 @@ class LoginModel {
   String user;
   String password;
 
-  LoginModel(this.user,this.password);
+  LoginModel({required this.user,required this.password});
 
 }

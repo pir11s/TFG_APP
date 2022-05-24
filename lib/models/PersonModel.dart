@@ -1,4 +1,4 @@
-import 'package:app/models/TechnologyModel.dart';
+
 import 'package:app/models/TechnologyUserModel.dart';
 
 ///Login information

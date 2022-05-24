@@ -1,5 +1,4 @@
 import 'package:app/views/LoginView.dart';
-import 'package:app/views/SplashScreenView.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppTheme.dart';
 

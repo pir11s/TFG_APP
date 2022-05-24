@@ -4,9 +4,11 @@ import 'package:app/models/TechnologyModel.dart';
 import 'package:app/models/UserKnowledgeModel.dart';
 import 'package:app/models/json/CompetencesTechnologies.dart';
 import 'package:app/models/json/EmployeesTechnologies.dart';
+import 'package:app/services/NavigatorService.dart';
 import 'package:app/services/PeopleService.dart';
 import 'package:app/views/commonWidgets/MiniAvatar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:app/views/commonWidgets/SanChip.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class TechnologyService {
@@ -16,7 +18,7 @@ class TechnologyService {
   static Map<String, List<TechnologyModel>> competenceTechnologies = {};
   TechnologyService._();
 
-   static read_data() async {
+   static readData() async {
 
        final String response = await rootBundle.loadString('assets/json/CompetenceTechnologies.json');
         CompetencesTechnologies competencesTechnologies = CompetencesTechnologies.fromJson(jsonDecode(response));
@@ -120,5 +122,46 @@ class TechnologyService {
 
     return tagList.toSet().toList();
   }
+
+  static List<Widget> getTechnologyListChipsByCompetence(String competenceName,String defaultDropdownValue,BuildContext context) {
+      List<Widget> tagList = [];
+      if (competenceName != defaultDropdownValue) {
+         List<TechnologyModel> technologies = TechnologyService.competenceTechnologies[competenceName]!;
+         for (TechnologyModel t in technologies) {
+             tagList.add(
+            GestureDetector(
+              child: Hero(
+                tag: "technology-${t.technologyName}",
+                child: Material(
+                    color: Colors.transparent,
+                    child: SanChip(label: t.technologyName)),
+              ),
+              onTap: () {
+                NavigateService.navigateDetailTechnology(t.technologyName, context);
+              },
+            ),
+          );
+         }
+        
+      } else {
+        TechnologyService.technologies.forEach((key, value) {
+            tagList.add(
+            GestureDetector(
+              child: Hero(
+                tag: "technology-${value.technologyName}",
+                child: Material(
+                    color: Colors.transparent,
+                    child: SanChip(label: value.technologyName)),
+              ),
+              onTap: () {
+                NavigateService.navigateDetailTechnology(value.technologyName, context);
+              },
+            ),
+          );
+        });
+      }
+
+      return tagList;
+    }
 
 }

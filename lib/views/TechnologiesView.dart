@@ -1,11 +1,6 @@
 
-import 'package:app/models/TechnologyModel.dart';
-import 'package:app/models/UserKnowledgeModel.dart';
-import 'package:app/services/NavigatorService.dart';
-import 'package:app/services/PeopleService.dart';
+
 import 'package:app/services/TechnologyService.dart';
-import 'package:app/views/commonWidgets/MiniAvatar.dart';
-import 'package:app/views/commonWidgets/SanChip.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
@@ -36,46 +31,7 @@ class _TechnologiesViewState extends State<TechnologyView> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> technologyList(String competenceName) {
-      List<Widget> tagList = [];
-      if (competenceName != defaultDropdownValue) {
-         List<TechnologyModel> technologies = TechnologyService.competenceTechnologies[competenceName]!;
-         for (TechnologyModel t in technologies) {
-             tagList.add(
-            GestureDetector(
-              child: Hero(
-                tag: "technology-${t.technologyName}",
-                child: Material(
-                    color: Colors.transparent,
-                    child: SanChip(label: t.technologyName)),
-              ),
-              onTap: () {
-                NavigateService.navigateDetailTechnology(t.technologyName, context);
-              },
-            ),
-          );
-         }
-        
-      } else {
-        TechnologyService.technologies.forEach((key, value) {
-            tagList.add(
-            GestureDetector(
-              child: Hero(
-                tag: "technology-${value.technologyName}",
-                child: Material(
-                    color: Colors.transparent,
-                    child: SanChip(label: value.technologyName)),
-              ),
-              onTap: () {
-                NavigateService.navigateDetailTechnology(value.technologyName, context);
-              },
-            ),
-          );
-        });
-      }
-
-      return tagList;
-    }
+    
 
     return Scaffold(
       body: PageContainer(
@@ -114,7 +70,7 @@ class _TechnologiesViewState extends State<TechnologyView> {
                     spacing: 5,
                     runAlignment: WrapAlignment.center,
                     runSpacing: -5,
-                    children: technologyList(dropdownValue),
+                    children: TechnologyService.getTechnologyListChipsByCompetence(dropdownValue,defaultDropdownValue,context),
                   ),
                   SizedBox(
                     height: 25.0,

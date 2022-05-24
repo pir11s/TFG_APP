@@ -1,25 +1,28 @@
 import 'dart:convert';
 
-import 'package:app/models/TechnologyModel.dart';
 import 'package:app/models/TechnologyUserModel.dart';
 import 'package:app/models/json/Details.dart';
 import 'package:app/models/json/Employees.dart';
 import 'package:app/models/json/EmployeesImages.dart';
 import 'package:app/models/json/EmployeesTechnologies.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:app/services/NavigatorService.dart';
+import 'package:app/views/commonWidgets/SanChip.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../models/PersonModel.dart';
+import '../views/commonWidgets/Buttons.dart';
 
 class PeopleService {
 
   PeopleService._();
 
-  static List<PersonModel> people = [];
+  static List<PersonModel> _people = [];
   static Map <String,PersonModel> _mapEmployees = {};
   static Map <String,PersonModel> _mapEmployeesByName = {};
 
-  static read_data() async {
+  static readData() async {
     final String responseEmployees = await rootBundle.loadString('assets/json/Employees.json');
     Employees employees = Employees.fromJson(jsonDecode(responseEmployees));
     for (Employee e in employees.employees!) {
@@ -61,7 +64,7 @@ class PeopleService {
     for (EmployeeImage e in employeesImages.employeesImages!) {
         PersonModel p = _mapEmployees[e.id]!;
         p.image = e.image!;
-        people.add(p);
+        _people.add(p);
         
     }
     final String responseEmployeeTech = await rootBundle.loadString('assets/json/EmployeesTech.json');
@@ -92,7 +95,7 @@ class PeopleService {
   }
 
   static int getNumberOfEmployees(){
-    return people.length;
+    return _people.length;
   }
 
   static AssetImage getAvatar(String id) {
@@ -112,5 +115,67 @@ class PeopleService {
     return avatar;
   }
 
+  static List<PersonModel> getPeople() {
+    return _people;
+  }
 
+
+  static List<Widget> buildContactMethods (PersonModel person) {
+      List<Widget> contactMethods = [];
+
+      if (person.mobilePhone != "") {
+      contactMethods.add(SignInButton.mini(
+          buttonType: ButtonType.call,
+          btnColor: Colors.green,
+          buttonSize: ButtonSize.small,
+          onPressed: () {
+            launchUrl(Uri.parse("tel:${person.mobilePhone}"));
+          }));
+    }
+
+    if (person.mail != "") {
+      contactMethods.add(SignInButton.mini(
+          buttonType: ButtonType.mail,
+          buttonSize: ButtonSize.small,
+          onPressed: () {
+            launchUrl(Uri.parse("mailto:${person.mail}"));
+          }));
+
+      contactMethods.add(SignInButton.mini(
+          buttonType: ButtonType.microsoftTeams,
+          buttonSize: ButtonSize.small,
+          onPressed: () {
+            launchUrl(
+                Uri.parse("msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
+          }));
+    }
+
+      return contactMethods;
+    }
+
+  static List<Widget> getUserTechnologyList(String id,PersonModel person,BuildContext context) {
+      List<Widget> tagList = [];
+
+      for (TechnologyUserModel t in person.technologies) {
+        
+          tagList.add(GestureDetector(
+            onTap: () {
+              NavigateService.navigateDetailTechnology(t.technologyName, context);
+            },
+            child: Hero(
+              tag: "technology-${t.technologyName}",
+              child: Material(
+                color: Color(0x00000000),
+                child: SanChip(
+                    label: t.technologyName,
+                    highlight: int.parse(t.skillLevel[0]) > 2),
+              ),
+            ),
+          ));
+        
+      }
+
+      return tagList;
+    }
+  
 }

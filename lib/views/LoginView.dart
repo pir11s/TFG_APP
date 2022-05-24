@@ -3,7 +3,6 @@ import 'package:app/services/NavigatorService.dart';
 import 'package:app/views/SplashScreenView.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:loading_animations/loading_animations.dart';
 import 'package:tfg_theme/AppColors.dart';
 
 class LoginView extends StatefulWidget {
@@ -54,8 +53,8 @@ class _LoginViewState extends State<LoginView> {
                         alignment: Alignment.centerLeft,
                         child: TextFormField(
                           style: Theme.of(context).textTheme.bodyText1,
-                          key: Key(LoginService.user.user),
-                          initialValue: LoginService.user.user,
+                          key: Key(LoginService.getUserInfo().user),
+                          initialValue: LoginService.getUserInfo().user,
                           decoration: InputDecoration(
                             hintText: "User",
                                   contentPadding:
@@ -74,6 +73,7 @@ class _LoginViewState extends State<LoginView> {
                             } else {
                               return 'Please enter username (Ej: n12345)';
                             }
+                            return null;
                           },
                         ),
                       ),
@@ -90,8 +90,8 @@ class _LoginViewState extends State<LoginView> {
                         alignment: Alignment.centerLeft,
                         child: TextFormField(
                           style: Theme.of(context).textTheme.bodyText1,
-                          key: Key(LoginService.user.password),
-                          initialValue: LoginService.user.user,
+                          key: Key(LoginService.getUserInfo().password),
+                          initialValue: LoginService.getUserInfo().password,
                           obscureText: LoginService.hidePassword,
                           decoration: InputDecoration(
                             hintText: "Password",
@@ -100,12 +100,12 @@ class _LoginViewState extends State<LoginView> {
                                   suffixIcon: IconButton(
                                    onPressed: () {
                                       setState(() {
-                                        LoginService.change_hide();
+                                        LoginService.changeHide();
                                       });
                                     },
                                     icon: Padding(
                                       padding: const EdgeInsets.only(top: 12),
-                                      child: Icon(LoginService.hidePassword
+                                      child: Icon(LoginService.getHidePassword()
                                           ? Icons.visibility
                                           : Icons.visibility_off),
                                     )
@@ -119,6 +119,7 @@ class _LoginViewState extends State<LoginView> {
                             } else {
                               return 'Please enter your password';
                             }
+                            return null;
                           },
                         ),
                       ),
@@ -133,10 +134,10 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                         Checkbox(
                             //todo
-                            value: LoginService.rememberMe,
+                            value: LoginService.getRememberMe(),
                            onChanged: (_) {
                              setState(() {
-                               LoginService.change_remember();
+                               LoginService.changeRemember();
                              });
                             }
                         ),
@@ -164,8 +165,8 @@ class _LoginViewState extends State<LoginView> {
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
                                 setState(() {
-                                  if ( LoginService.authenticate_user()) {
-                                    if (LoginService.rememberMe == true) {
+                                  if ( LoginService.authenticateUser()) {
+                                    if (LoginService.getRememberMe() == true) {
                                           
                                         } else {
                                           

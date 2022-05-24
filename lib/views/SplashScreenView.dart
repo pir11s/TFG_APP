@@ -1,8 +1,8 @@
 
 import 'package:app/services/CompetenceService.dart';
+import 'package:app/services/NavigatorService.dart';
 import 'package:app/services/PeopleService.dart';
 import 'package:app/services/TechnologyService.dart';
-import 'package:app/views/HomeView.dart';
 import 'package:app/views/commonWidgets/PageContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animations/loading_animations.dart';
@@ -29,36 +29,15 @@ class _LoadingScreenViewState extends State<LoadingScreenView> {
   void initState() {
     super.initState();
      WidgetsBinding.instance?.addPostFrameCallback((_) async {
-      await TechnologyService.read_data();
-      await CompetenceService.read_data();
-      await PeopleService.read_data();
+      await TechnologyService.readData();
+      await CompetenceService.readData();
+      await PeopleService.readData();
       setState(() {
         
       });
     });
 
-    Future.delayed(const Duration(milliseconds: 7000), () {
-      Navigator.pushReplacement(
-        context,
-        PageRouteBuilder(
-            transitionDuration: Duration(milliseconds: 1500),
-            transitionsBuilder: (BuildContext context,
-                Animation<double> animation,
-                Animation<double> secAnimation,
-                Widget child) {
-              return FadeTransition(
-                opacity: animation,
-                child: child,
-              );
-            },
-            pageBuilder: (BuildContext context, Animation<double> animation,
-                Animation<double> secAnimation) {
-              return MyHomePage(
-                title: widget.title,
-              );
-            }),
-      );
-    });
+    NavigateService.navigateHome(context, widget.title);
   }
 
   @override
@@ -95,7 +74,7 @@ class _LoadingScreenViewState extends State<LoadingScreenView> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 48,
-                            fontFamily: 'packages/san_theme/SantanderHeadline',
+                            fontFamily: 'packages/tfg_theme/SantanderHeadline',
                             color: AppColors.color9,
                           ),
                         ),

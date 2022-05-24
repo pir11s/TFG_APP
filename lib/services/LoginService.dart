@@ -1,38 +1,39 @@
 
-import 'dart:ffi';
 
-import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/LoginModel.dart';
 
 class LoginService {
 
-  static LoginModel user = LoginModel("","");
+  static LoginModel user = LoginModel(user:"",password:"");
   static bool rememberMe = false;
   static bool hidePassword = true;
   static RegExp userPattern = RegExp('n{1}[0-9]{5}');
 
   LoginService._();
 
-  static bool authenticate_user()  {
+  static bool authenticateUser()  {
     return true;
   }
 
-  static void change_remember(){
+  static void changeRemember(){
     rememberMe = !rememberMe;
   }
 
-  static void change_hide(){
+  static void changeHide(){
     hidePassword = !hidePassword;
   }
 
-  static void save_user() async {
+  static void saveUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('userName', user.user);
     prefs.setString('password', user.password);
   }
 
+  static LoginModel getUserInfo(){
+    return user;
+  }
   
 
   static  getUser() async {
@@ -53,13 +54,6 @@ class LoginService {
     user.password = newPassword;
   }
 
-  static Future saveUser() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-
-    prefs.setString('user', user.user);
-    prefs.setString('password', user.password);
-  }
-
   static Future deleteUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('user', '');
@@ -74,4 +68,10 @@ class LoginService {
     return passwd != "" ? true: false;
   }
 
+  static bool getRememberMe() {
+    return rememberMe;
+  }
+
+  static bool getHidePassword() {return hidePassword;}
+    
 }

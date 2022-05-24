@@ -1,4 +1,5 @@
 import 'package:app/views/CompetencesView.dart';
+import 'package:app/views/HomeView.dart';
 import 'package:app/views/PeopleView.dart';
 import 'package:app/views/TechnologiesView.dart';
 import 'package:flutter/material.dart';
@@ -79,5 +80,30 @@ class NavigateService {
                           );
                         }),
                       );
+  }
+
+  static navigateHome(BuildContext context,String title){
+    Future.delayed(const Duration(milliseconds: 7000), () {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+            transitionDuration: Duration(milliseconds: 1500),
+            transitionsBuilder: (BuildContext context,
+                Animation<double> animation,
+                Animation<double> secAnimation,
+                Widget child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            pageBuilder: (BuildContext context, Animation<double> animation,
+                Animation<double> secAnimation) {
+              return MyHomePage(
+                title: title,
+              );
+            }),
+      );
+    });
   }
 }

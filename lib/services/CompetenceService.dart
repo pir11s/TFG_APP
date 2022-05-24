@@ -14,7 +14,7 @@ class CompetenceService {
 
   CompetenceService._();
 
-  static read_data() async {
+  static readData() async {
 
       final String responseLeaders = await rootBundle.loadString('assets/json/CompetenceLeaders.json');
       CompetencesLeaders competencesLeaders = CompetencesLeaders.fromJson(jsonDecode(responseLeaders));
@@ -65,6 +65,10 @@ class CompetenceService {
        competencesNames.add(value.competenceName);
      });
      return competencesNames;
+  }
+
+  static Map<String,CompetenceModel> getCompetences(){
+    return competences;
   }
 
   static String getCompetenceImage(String competenceName) {

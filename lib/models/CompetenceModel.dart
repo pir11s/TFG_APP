@@ -1,5 +1,3 @@
-import 'package:app/models/PersonModel.dart';
-import 'package:app/models/TechnologyModel.dart';
 
 class CompetenceModel {
 

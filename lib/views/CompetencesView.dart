@@ -35,9 +35,9 @@ class _CompetencesState extends State<CompetencesView> {
                 height: 25,
               );
             },
-            itemCount: CompetenceService.competences.length,
+            itemCount: CompetenceService.getCompetences().length,
             itemBuilder: (context, index) {
-              String key = CompetenceService.competences.keys.elementAt(index);
+              String key = CompetenceService.getCompetences().keys.elementAt(index);
               double sizedBoxFirst = 0;
               sizedBoxFirst = index == 0 ?  15 : 0;
               return Column(
@@ -84,9 +84,9 @@ class _CompetencesState extends State<CompetencesView> {
               ? const EdgeInsets.only(top: 15.0)
               : const EdgeInsets.only(),
           child: Hero(
-            tag: 'CompetenceImageDetail' + CompetenceService.competences[key]!.competenceName,
+            tag: 'CompetenceImageDetail' + CompetenceService.getCompetences()[key]!.competenceName,
             child: Image(
-              image: ResizeImage(AssetImage(CompetenceService.competences[key]!.image),
+              image: ResizeImage(AssetImage(CompetenceService.getCompetences()[key]!.image),
                   width: 200, height: 150),
             ),
           ),
@@ -101,12 +101,12 @@ class _CompetencesState extends State<CompetencesView> {
         children: [
           Container(
             child: Text(
-              CompetenceService.competences[key]!.competenceName,
+              CompetenceService.getCompetences()[key]!.competenceName,
               style: TextStyle(fontSize: 24, color: AppColors.color12),
             ),
           ),
           ExpandableText(
-             CompetenceService.competences[key]!.description,
+             CompetenceService.getCompetences()[key]!.description,
             textAlign: TextAlign.justify,
             expandText: 'show more',
             collapseText: 'show less',
