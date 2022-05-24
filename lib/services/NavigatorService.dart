@@ -33,13 +33,12 @@ class NavigateService {
   }
 
   static void navigateDetailEmployee(id, context) {
-      Navigator.of(context).push(
+    Navigator.of(context).push(
       new MaterialPageRoute<void>(
         builder: (BuildContext context) {
           return new Scaffold(
             appBar: new AppBar(
-              title:
-                  Text('Person info & knowledge', style: AppText.appBar),
+              title: Text('Person info & knowledge', style: AppText.appBar),
               elevation: 15,
               backgroundColor: AppColors.color4,
             ),
@@ -69,20 +68,19 @@ class NavigateService {
     );
   }
 
-  static navigateDetailCompetence(competenceName,context) {
-      Navigator.push(
-                        context,
-                        PageRouteBuilder(pageBuilder: (BuildContext context,
-                            Animation<double> animation,
-                            Animation<double> secAnimation) {
-                          return CompetenceDetailView(
-                            competenceName: competenceName,
-                          );
-                        }),
-                      );
+  static navigateDetailCompetence(competenceName, context) {
+    Navigator.push(
+      context,
+      PageRouteBuilder(pageBuilder: (BuildContext context,
+          Animation<double> animation, Animation<double> secAnimation) {
+        return CompetenceDetailView(
+          competenceName: competenceName,
+        );
+      }),
+    );
   }
 
-  static navigateHome(BuildContext context,String title){
+  static navigateHome(BuildContext context, String title) {
     Future.delayed(const Duration(milliseconds: 7000), () {
       Navigator.pushReplacement(
         context,

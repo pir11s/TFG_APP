@@ -1,4 +1,3 @@
-
 import 'package:app/services/CompetenceService.dart';
 import 'package:app/services/NavigatorService.dart';
 import 'package:app/services/PeopleService.dart';
@@ -8,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:loading_animations/loading_animations.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
-
 
 ///Default page if user is already logged in. Displays for 3 seconds a screen with a loading
 ///animation. If user is not logged in this page will display after log.
@@ -22,19 +20,14 @@ class LoadingScreenView extends StatefulWidget {
 }
 
 class _LoadingScreenViewState extends State<LoadingScreenView> {
-
- 
-
   @override
   void initState() {
     super.initState();
-     WidgetsBinding.instance?.addPostFrameCallback((_) async {
+    WidgetsBinding.instance?.addPostFrameCallback((_) async {
       await TechnologyService.readData();
       await CompetenceService.readData();
       await PeopleService.readData();
-      setState(() {
-        
-      });
+      setState(() {});
     });
 
     NavigateService.navigateHome(context, widget.title);
@@ -61,13 +54,16 @@ class _LoadingScreenViewState extends State<LoadingScreenView> {
                         child: Hero(
                           tag: 'CoeLogo',
                           child: Image(
-                            image: ResizeImage(AssetImage("images/icons/icon.png"),
-                                width: 150, height: 150),
+                            image: ResizeImage(
+                                AssetImage("images/icons/icon.png"),
+                                width: 150,
+                                height: 150),
                           ),
                         ),
                       ),
-                      SizedBox(height: 20,)
-                      ,
+                      SizedBox(
+                        height: 20,
+                      ),
                       Center(
                         child: Text(
                           widget.title,
@@ -114,4 +110,3 @@ class _LoadingScreenViewState extends State<LoadingScreenView> {
     );
   }
 }
-

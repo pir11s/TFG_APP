@@ -15,74 +15,79 @@ import '../models/PersonModel.dart';
 import '../views/commonWidgets/Buttons.dart';
 
 class PeopleService {
-
   PeopleService._();
 
   static List<PersonModel> _people = [];
-  static Map <String,PersonModel> _mapEmployees = {};
-  static Map <String,PersonModel> _mapEmployeesByName = {};
+  static Map<String, PersonModel> _mapEmployees = {};
+  static Map<String, PersonModel> _mapEmployeesByName = {};
 
   static readData() async {
-    final String responseEmployees = await rootBundle.loadString('assets/json/Employees.json');
+    final String responseEmployees =
+        await rootBundle.loadString('assets/json/Employees.json');
     Employees employees = Employees.fromJson(jsonDecode(responseEmployees));
     for (Employee e in employees.employees!) {
       PersonModel p = new PersonModel(
-        user: e.name!.toUpperCase(), 
-        displayName: "", 
-        jobTitle: "", 
-        mail: "", 
-        mobilePhone: "", 
-        officeLocation: "", 
-        prefferedLanguage: "", 
-        surname: "", 
-        userPrincipalName: "", 
-        id: e.id!, competence: e.competence!, 
-        function: e.groupFunction!, technologies: [], 
-        image: "", businessPhone: "");
+          user: e.name!.toUpperCase(),
+          displayName: "",
+          jobTitle: "",
+          mail: "",
+          mobilePhone: "",
+          officeLocation: "",
+          prefferedLanguage: "",
+          surname: "",
+          userPrincipalName: "",
+          id: e.id!,
+          competence: e.competence!,
+          function: e.groupFunction!,
+          technologies: [],
+          image: "",
+          businessPhone: "");
       _mapEmployees[p.id] = p;
       _mapEmployeesByName[p.user.toUpperCase()] = p;
     }
-    final String responseDetails = await rootBundle.loadString('assets/json/Details.json');
+    final String responseDetails =
+        await rootBundle.loadString('assets/json/Details.json');
     Details details = Details.fromJson(jsonDecode(responseDetails));
     Pattern mail = RegExp("@");
     for (EmployeeDetail e in details.employeesDetails!) {
-      
-        PersonModel p = _mapEmployees[
-          e.userPrincipalName!.split(mail)[0]
-          ]!;
-        p.displayName = e.displayName!;
-        p.jobTitle = e.jobTitle!;
-        p.mail = e.mail!; 
-        p.mobilePhone = e.mobilePhone!; 
-        p.officeLocation = e.officeLocation!; 
-        p.prefferedLanguage = e.preferredLanguage == null ? "" : e.preferredLanguage!; 
-        p.surname = e.surname!;
-        p.userPrincipalName = e.userPrincipalName!; 
+      PersonModel p = _mapEmployees[e.userPrincipalName!.split(mail)[0]]!;
+      p.displayName = e.displayName!;
+      p.jobTitle = e.jobTitle!;
+      p.mail = e.mail!;
+      p.mobilePhone = e.mobilePhone!;
+      p.officeLocation = e.officeLocation!;
+      p.prefferedLanguage =
+          e.preferredLanguage == null ? "" : e.preferredLanguage!;
+      p.surname = e.surname!;
+      p.userPrincipalName = e.userPrincipalName!;
     }
-    final String responseImage = await rootBundle.loadString('assets/json/EmployeesImg.json');
-    EmployeesImages employeesImages = EmployeesImages.fromJson(jsonDecode(responseImage));
+    final String responseImage =
+        await rootBundle.loadString('assets/json/EmployeesImg.json');
+    EmployeesImages employeesImages =
+        EmployeesImages.fromJson(jsonDecode(responseImage));
     for (EmployeeImage e in employeesImages.employeesImages!) {
-        PersonModel p = _mapEmployees[e.id]!;
-        p.image = e.image!;
-        _people.add(p);
-        
+      PersonModel p = _mapEmployees[e.id]!;
+      p.image = e.image!;
+      _people.add(p);
     }
-    final String responseEmployeeTech = await rootBundle.loadString('assets/json/EmployeesTech.json');
-    EmployeesTechnologies employeesTechnologies = EmployeesTechnologies.fromJson(jsonDecode(responseEmployeeTech));
+    final String responseEmployeeTech =
+        await rootBundle.loadString('assets/json/EmployeesTech.json');
+    EmployeesTechnologies employeesTechnologies =
+        EmployeesTechnologies.fromJson(jsonDecode(responseEmployeeTech));
     for (EmployeeTechnology e in employeesTechnologies.employeesTechnologies!) {
-        PersonModel p =  _mapEmployeesByName[e.employeeName!.toUpperCase()]!;
-        p.technologies.add(
-          new TechnologyUserModel(competenceName: e.competenceName!, 
-          technologyName: e.technology!, skillLevel: e.skillLevel!));
+      PersonModel p = _mapEmployeesByName[e.employeeName!.toUpperCase()]!;
+      p.technologies.add(new TechnologyUserModel(
+          competenceName: e.competenceName!,
+          technologyName: e.technology!,
+          skillLevel: e.skillLevel!));
     }
-    
   }
 
   static PersonModel getEmployeeById(String id) {
     return _mapEmployees[id]!;
   }
 
-  static PersonModel getEmployeeByName(String name){
+  static PersonModel getEmployeeByName(String name) {
     return _mapEmployeesByName[name.toUpperCase()]!;
   }
 
@@ -94,7 +99,7 @@ class PeopleService {
     return _mapEmployees[id]!.image == "YES";
   }
 
-  static int getNumberOfEmployees(){
+  static int getNumberOfEmployees() {
     return _people.length;
   }
 
@@ -119,11 +124,10 @@ class PeopleService {
     return _people;
   }
 
+  static List<Widget> buildContactMethods(PersonModel person) {
+    List<Widget> contactMethods = [];
 
-  static List<Widget> buildContactMethods (PersonModel person) {
-      List<Widget> contactMethods = [];
-
-      if (person.mobilePhone != "") {
+    if (person.mobilePhone != "") {
       contactMethods.add(SignInButton.mini(
           buttonType: ButtonType.call,
           btnColor: Colors.green,
@@ -145,37 +149,35 @@ class PeopleService {
           buttonType: ButtonType.microsoftTeams,
           buttonSize: ButtonSize.small,
           onPressed: () {
-            launchUrl(
-                Uri.parse("msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
+            launchUrl(Uri.parse(
+                "msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
           }));
     }
 
-      return contactMethods;
+    return contactMethods;
+  }
+
+  static List<Widget> getUserTechnologyList(
+      String id, PersonModel person, BuildContext context) {
+    List<Widget> tagList = [];
+
+    for (TechnologyUserModel t in person.technologies) {
+      tagList.add(GestureDetector(
+        onTap: () {
+          NavigateService.navigateDetailTechnology(t.technologyName, context);
+        },
+        child: Hero(
+          tag: "technology-${t.technologyName}",
+          child: Material(
+            color: Color(0x00000000),
+            child: SanChip(
+                label: t.technologyName,
+                highlight: int.parse(t.skillLevel[0]) > 2),
+          ),
+        ),
+      ));
     }
 
-  static List<Widget> getUserTechnologyList(String id,PersonModel person,BuildContext context) {
-      List<Widget> tagList = [];
-
-      for (TechnologyUserModel t in person.technologies) {
-        
-          tagList.add(GestureDetector(
-            onTap: () {
-              NavigateService.navigateDetailTechnology(t.technologyName, context);
-            },
-            child: Hero(
-              tag: "technology-${t.technologyName}",
-              child: Material(
-                color: Color(0x00000000),
-                child: SanChip(
-                    label: t.technologyName,
-                    highlight: int.parse(t.skillLevel[0]) > 2),
-              ),
-            ),
-          ));
-        
-      }
-
-      return tagList;
-    }
-  
+    return tagList;
+  }
 }

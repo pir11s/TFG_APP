@@ -15,8 +15,6 @@ class PeopleView extends StatefulWidget {
 }
 
 class _PeopleViewState extends State<PeopleView> {
-
-
   List<PersonModel> _peopleShown = PeopleService.getPeople();
   String _searchText = '';
 
@@ -58,17 +56,18 @@ class _PeopleViewState extends State<PeopleView> {
                   leading: Hero(
                     tag: 'avatar-${PeopleService.getPeople()[index].id}',
                     child: Container(
-                            child: CircleAvatar(
-                              radius: 25.0,
-                              backgroundColor: Colors.transparent,
-                              backgroundImage:
-                                  PeopleService.getAvatar(_peopleShown[index].id),
-                            ),
-                          ),
+                      child: CircleAvatar(
+                        radius: 25.0,
+                        backgroundColor: Colors.transparent,
+                        backgroundImage:
+                            PeopleService.getAvatar(_peopleShown[index].id),
+                      ),
+                    ),
                   ),
                   trailing: Icon(Icons.keyboard_arrow_right),
                   onTap: () {
-                    NavigateService.navigateDetailEmployee(_peopleShown[index].id, context);
+                    NavigateService.navigateDetailEmployee(
+                        _peopleShown[index].id, context);
                   });
             },
             itemCount: _peopleShown.length,
@@ -88,11 +87,8 @@ class PersonDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     PersonModel person = PeopleService.getEmployeeById(id);
 
-    
-
-    List<Widget> technologiesList = PeopleService.getUserTechnologyList(id,person,context);
-
-    
+    List<Widget> technologiesList =
+        PeopleService.getUserTechnologyList(id, person, context);
 
     return PageContainer(
       child: ListView(
@@ -105,83 +101,86 @@ class PersonDetailView extends StatelessWidget {
                   width: 150.0,
                 ),
                 Hero(
-      tag: 'avatar-$id',
-      child: PeopleService.hasImageById(id)
-          ? Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 15,
-                      color: AppColors.color6,
-                      spreadRadius: 10)
-                ],
-              ),
-              child: CircleAvatar(
-                radius: 75,
-                backgroundColor: AppColors.color6,
-                backgroundImage: PeopleService.getAvatar(id),
-              ),
-            )
-          : Container(
-              child: CircleAvatar(
-                radius: 75,
-                backgroundColor: Colors.transparent,
-                backgroundImage: PeopleService.getAvatar(id),
-              ),
-            ),
-      ),
+                  tag: 'avatar-$id',
+                  child: PeopleService.hasImageById(id)
+                      ? Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                  blurRadius: 15,
+                                  color: AppColors.color6,
+                                  spreadRadius: 10)
+                            ],
+                          ),
+                          child: CircleAvatar(
+                            radius: 75,
+                            backgroundColor: AppColors.color6,
+                            backgroundImage: PeopleService.getAvatar(id),
+                          ),
+                        )
+                      : Container(
+                          child: CircleAvatar(
+                            radius: 75,
+                            backgroundColor: Colors.transparent,
+                            backgroundImage: PeopleService.getAvatar(id),
+                          ),
+                        ),
+                ),
                 SizedBox(
                   height: 10.0,
                   width: 150.0,
                 ),
-               Card(
-        elevation: 10,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-        child: ListTile(
-          title: Column(
-            children: [
-              Text(
-                person.surname,
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                person.competence,
-                style: AppText.moduleLinkTitle,
-              ),
-              Text(
-                person.function,
-                style: AppText.moduleTitle,
-              ),
-              (person.officeLocation != "" &&
-                      person.officeLocation != '')
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.location_pin,
-                          color: AppColors.color12,
-                        ),
-                        SizedBox(width: 5),
-                        Text(person.officeLocation,
+                Card(
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    margin:
+                        EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+                    child: ListTile(
+                      title: Column(
+                        children: [
+                          Text(
+                            person.surname,
                             textAlign: TextAlign.center,
-                            style: AppText.bodyText),
-                        SizedBox(width: 10),
-                      ],
-                    )
-                  : SizedBox(height: 0),
-              SizedBox(height: 5),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: PeopleService.buildContactMethods(person),
-              ),
-              SizedBox(height: 5),
-            ],
-          ),
-        )),
+                            style: TextStyle(
+                                fontSize: 24.0, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            person.competence,
+                            style: AppText.moduleLinkTitle,
+                          ),
+                          Text(
+                            person.function,
+                            style: AppText.moduleTitle,
+                          ),
+                          (person.officeLocation != "" &&
+                                  person.officeLocation != '')
+                              ? Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.location_pin,
+                                      color: AppColors.color12,
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(person.officeLocation,
+                                        textAlign: TextAlign.center,
+                                        style: AppText.bodyText),
+                                    SizedBox(width: 10),
+                                  ],
+                                )
+                              : SizedBox(height: 0),
+                          SizedBox(height: 5),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: PeopleService.buildContactMethods(person),
+                          ),
+                          SizedBox(height: 5),
+                        ],
+                      ),
+                    )),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 25),
                   child: Column(
@@ -203,7 +202,4 @@ class PersonDetailView extends StatelessWidget {
       ),
     );
   }
-
-  
 }
-

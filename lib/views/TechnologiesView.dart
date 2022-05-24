@@ -1,5 +1,3 @@
-
-
 import 'package:app/services/TechnologyService.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
@@ -7,7 +5,6 @@ import 'package:tfg_theme/AppText.dart';
 import 'commonWidgets/PageContainer.dart';
 
 const defaultDropdownValue = "Full CoE";
-
 
 ///Display of all technologies of CoE. All technologies are assigned to a competence. You can
 ///swap between competences to see all technologies related to each competence. If technology is clicked
@@ -20,7 +17,6 @@ class TechnologyView extends StatefulWidget {
 }
 
 class _TechnologiesViewState extends State<TechnologyView> {
-  
   List<String> competencesList = [defaultDropdownValue];
   String dropdownValue = defaultDropdownValue;
   @override
@@ -31,8 +27,6 @@ class _TechnologiesViewState extends State<TechnologyView> {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       body: PageContainer(
         child: ListView(
@@ -70,7 +64,9 @@ class _TechnologiesViewState extends State<TechnologyView> {
                     spacing: 5,
                     runAlignment: WrapAlignment.center,
                     runSpacing: -5,
-                    children: TechnologyService.getTechnologyListChipsByCompetence(dropdownValue,defaultDropdownValue,context),
+                    children:
+                        TechnologyService.getTechnologyListChipsByCompetence(
+                            dropdownValue, defaultDropdownValue, context),
                   ),
                   SizedBox(
                     height: 25.0,
@@ -86,18 +82,16 @@ class _TechnologiesViewState extends State<TechnologyView> {
   }
 }
 
-
 class TechnologyDetailView extends StatelessWidget {
   final String technologyName;
 
   TechnologyDetailView({required this.technologyName});
 
-  
-
   @override
   Widget build(BuildContext context) {
     List<Widget> mainExperts = TechnologyService.getExperts(technologyName);
-    List<Widget> otherExperts = TechnologyService.getPeopleWithKnowledge(technologyName);
+    List<Widget> otherExperts =
+        TechnologyService.getPeopleWithKnowledge(technologyName);
 
     return Scaffold(
       backgroundColor: Colors.transparent,

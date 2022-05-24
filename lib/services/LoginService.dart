@@ -1,27 +1,24 @@
-
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/LoginModel.dart';
 
 class LoginService {
-
-  static LoginModel user = LoginModel(user:"",password:"");
+  static LoginModel user = LoginModel(user: "", password: "");
   static bool rememberMe = false;
   static bool hidePassword = true;
   static RegExp userPattern = RegExp('n{1}[0-9]{5}');
 
   LoginService._();
 
-  static bool authenticateUser()  {
+  static bool authenticateUser() {
     return true;
   }
 
-  static void changeRemember(){
+  static void changeRemember() {
     rememberMe = !rememberMe;
   }
 
-  static void changeHide(){
+  static void changeHide() {
     hidePassword = !hidePassword;
   }
 
@@ -31,12 +28,11 @@ class LoginService {
     prefs.setString('password', user.password);
   }
 
-  static LoginModel getUserInfo(){
+  static LoginModel getUserInfo() {
     return user;
   }
-  
 
-  static  getUser() async {
+  static getUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     user.user = (prefs.getString('userName') ?? '');
   }
@@ -47,9 +43,9 @@ class LoginService {
   }
 
   static void setUser(String newUser) {
-      user.user = newUser;
+    user.user = newUser;
   }
-  
+
   static void setPassword(String newPassword) {
     user.password = newPassword;
   }
@@ -61,17 +57,18 @@ class LoginService {
   }
 
   static bool checkUserPatternOK(String user) {
-    return userPattern.firstMatch(user) != null ?  true : false;
+    return userPattern.firstMatch(user) != null ? true : false;
   }
 
   static bool checkPasswdNotEmpty(String passwd) {
-    return passwd != "" ? true: false;
+    return passwd != "" ? true : false;
   }
 
   static bool getRememberMe() {
     return rememberMe;
   }
 
-  static bool getHidePassword() {return hidePassword;}
-    
+  static bool getHidePassword() {
+    return hidePassword;
+  }
 }

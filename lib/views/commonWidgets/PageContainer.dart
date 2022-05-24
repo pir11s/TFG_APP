@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 ///Default Container of pages. Defines a standard background color for it's child.

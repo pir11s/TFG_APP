@@ -10,6 +10,7 @@ import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
 
 import 'CompetencesView.dart';
+
 ///Home page of whole app.
 ///Defines 4 different pages:
 /// - People: List of people in CoE
@@ -28,7 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   void initState() {
     super.initState();
     WidgetsBinding.instance?.addPostFrameCallback((_) async {
@@ -57,14 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-       appBar: AppBar(
+      appBar: AppBar(
         leading: Hero(
-            tag: 'CoeLogo', child: Image(image: AssetImage('images/icons/icon.png'))),
+            tag: 'CoeLogo',
+            child: Image(image: AssetImage('images/icons/icon.png'))),
         title: Text(widget.title, style: AppText.appBar),
         elevation: 15,
         backgroundColor: AppColors.color4,
-        
         actions: [
           Row(
             children: [
@@ -74,25 +73,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   WidgetsBinding.instance!.addPostFrameCallback((_) async {
                     await LoginService.deleteUser();
                     NavigateService.navigateWithFadeWithReplacement(context,
-                        objective: LoginView()
-                        );
+                        objective: LoginView());
                   });
                 },
               ),
             ],
           ),
         ],
-        
       ),
       body: PageView(
-              children: _widgetOptions,
-              controller: _pageController,
-              onPageChanged: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-            ),
+        children: _widgetOptions,
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -126,22 +123,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: ImageIcon(AssetImage('images/pages/technologies.png')),
                 label: 'Technologies',
               ),
-              
               BottomNavigationBarItem(
                 //icon: Icon(Icons.track_changes),
                 icon: ImageIcon(AssetImage('images/pages/kpis.png')),
                 label: 'KPIs',
               ),
-              
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
           ),
         ),
       ),
-
-
     );
   }
-
 }

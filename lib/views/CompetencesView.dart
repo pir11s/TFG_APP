@@ -1,4 +1,3 @@
-
 import 'package:app/models/PersonModel.dart';
 import 'package:app/services/CompetenceService.dart';
 import 'package:app/services/NavigatorService.dart';
@@ -13,7 +12,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'commonWidgets/PageContainer.dart';
 
-
 ///List of CoE competences. Each competences has a title and related text, plus an image to describe
 ///the competence. If any competence is clicked a CompetenceDetail widget is displayed.
 class CompetencesView extends StatefulWidget {
@@ -22,57 +20,56 @@ class CompetencesView extends StatefulWidget {
 }
 
 class _CompetencesState extends State<CompetencesView> {
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageContainer(
-        
-          child: ListView.separated(
-            separatorBuilder: (content, index) {
-              return Divider(
-                height: 25,
-              );
-            },
-            itemCount: CompetenceService.getCompetences().length,
-            itemBuilder: (context, index) {
-              String key = CompetenceService.getCompetences().keys.elementAt(index);
-              double sizedBoxFirst = 0;
-              sizedBoxFirst = index == 0 ?  15 : 0;
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox( height: sizedBoxFirst,),
-                  Material(
-                    color: Colors.transparent,
-                    child: MaterialButton(
-                      onPressed: () {
-                        NavigateService.navigateDetailCompetence(key, context);
-                      },
-                      child: Row(
-                        children: [
-                          competenceImage(key),
-                          Expanded(
-                            child: SizedBox(),
-                            flex: 1,
-                          ),
-                          competenceText(key),
-                          Expanded(
-                            child: SizedBox(),
-                            flex: 1,
-                          ),
-                        ],
-                      ),
+        child: ListView.separated(
+          separatorBuilder: (content, index) {
+            return Divider(
+              height: 25,
+            );
+          },
+          itemCount: CompetenceService.getCompetences().length,
+          itemBuilder: (context, index) {
+            String key =
+                CompetenceService.getCompetences().keys.elementAt(index);
+            double sizedBoxFirst = 0;
+            sizedBoxFirst = index == 0 ? 15 : 0;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: sizedBoxFirst,
+                ),
+                Material(
+                  color: Colors.transparent,
+                  child: MaterialButton(
+                    onPressed: () {
+                      NavigateService.navigateDetailCompetence(key, context);
+                    },
+                    child: Row(
+                      children: [
+                        competenceImage(key),
+                        Expanded(
+                          child: SizedBox(),
+                          flex: 1,
+                        ),
+                        competenceText(key),
+                        Expanded(
+                          child: SizedBox(),
+                          flex: 1,
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              );
-            },
-          ),
+                ),
+              ],
+            );
+          },
         ),
-      
+      ),
     );
   }
 
@@ -84,16 +81,19 @@ class _CompetencesState extends State<CompetencesView> {
               ? const EdgeInsets.only(top: 15.0)
               : const EdgeInsets.only(),
           child: Hero(
-            tag: 'CompetenceImageDetail' + CompetenceService.getCompetences()[key]!.competenceName,
+            tag: 'CompetenceImageDetail' +
+                CompetenceService.getCompetences()[key]!.competenceName,
             child: Image(
-              image: ResizeImage(AssetImage(CompetenceService.getCompetences()[key]!.image),
-                  width: 200, height: 150),
+              image: ResizeImage(
+                  AssetImage(CompetenceService.getCompetences()[key]!.image),
+                  width: 200,
+                  height: 150),
             ),
           ),
         ));
   }
 
-   Expanded competenceText(String key) {
+  Expanded competenceText(String key) {
     return Expanded(
       flex: 9,
       child: Column(
@@ -106,7 +106,7 @@ class _CompetencesState extends State<CompetencesView> {
             ),
           ),
           ExpandableText(
-             CompetenceService.getCompetences()[key]!.description,
+            CompetenceService.getCompetences()[key]!.description,
             textAlign: TextAlign.justify,
             expandText: 'show more',
             collapseText: 'show less',
@@ -120,7 +120,6 @@ class _CompetencesState extends State<CompetencesView> {
     );
   }
 }
-
 
 class CompetenceDetailView extends StatefulWidget {
   final String competenceName;
@@ -161,7 +160,8 @@ class _CompetenceDetailViewState extends State<CompetenceDetailView> {
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         alignment: FractionalOffset.topCenter,
-                        image: AssetImage(CompetenceService.getCompetenceImage(widget.competenceName))),
+                        image: AssetImage(CompetenceService.getCompetenceImage(
+                            widget.competenceName))),
                   ),
                 ),
               ),
@@ -179,7 +179,6 @@ class _CompetenceDetailViewState extends State<CompetenceDetailView> {
                         Inform(
                           competenceName: widget.competenceName,
                         ),
-                        
                       ],
                       controller: _pageController,
                       onPageChanged: (index) {
@@ -197,7 +196,6 @@ class _CompetenceDetailViewState extends State<CompetenceDetailView> {
       ),
     );
   }
-  
 }
 
 class Inform extends StatefulWidget {
@@ -209,7 +207,6 @@ class Inform extends StatefulWidget {
 }
 
 class _InformState extends State<Inform> {
-  
   Text titleSection(text) {
     return Text(
       text,
@@ -226,14 +223,15 @@ class _InformState extends State<Inform> {
     );
   }
 
-  void _launchURL(String url) async =>
-      await canLaunchUrl(Uri.parse(url)) ? await launchUrl(Uri.parse(url)) : throw 'Could not launch $url';
+  void _launchURL(String url) async => await canLaunchUrl(Uri.parse(url))
+      ? await launchUrl(Uri.parse(url))
+      : throw 'Could not launch $url';
 
   List<Widget> getContactMethods(String personName) {
     PersonModel person = PeopleService.getEmployeeByName(personName);
 
     List<Widget> contactMethods = [];
-    
+
     contactMethods.add(Expanded(child: MiniAvatar(id: person.id)));
 
     if (person.mobilePhone != "" && person.mobilePhone != '') {
@@ -259,8 +257,8 @@ class _InformState extends State<Inform> {
         child: SignInButton.nano(
             buttonType: ButtonType.microsoftTeams,
             onPressed: () {
-              launchUrl(
-                  Uri.parse("msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
+              launchUrl(Uri.parse(
+                  "msteams://teams.microsoft.com/l/chat/0/0?users=${person.mail}"));
             }),
       ));
     }
@@ -270,10 +268,12 @@ class _InformState extends State<Inform> {
 
   List<Widget> peopleList(String competenceName) {
     List<Widget> tagList = [];
-    String competenceLeader = CompetenceService.getCompetenceLeader(competenceName);
-    List<String> usersNames = CompetenceService.getEmployeesOfCompetence(competenceName);
+    String competenceLeader =
+        CompetenceService.getCompetenceLeader(competenceName);
+    List<String> usersNames =
+        CompetenceService.getEmployeesOfCompetence(competenceName);
     for (String name in usersNames) {
-      if ( competenceLeader != name) {
+      if (competenceLeader != name) {
         tagList.add(MiniAvatar(id: PeopleService.getEmployeeByName(name).id));
       }
     }
@@ -281,7 +281,6 @@ class _InformState extends State<Inform> {
     return tagList;
   }
 
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -301,8 +300,8 @@ class _InformState extends State<Inform> {
                 child: Text(
                   'COMPETENCE LEADER',
                   textAlign: TextAlign.center,
-                  style: AppText.bodyOutstandingText
-                      .copyWith(color: Colors.black),
+                  style:
+                      AppText.bodyOutstandingText.copyWith(color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -311,14 +310,15 @@ class _InformState extends State<Inform> {
               Row(
                 children: [
                   Expanded(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: getContactMethods(
-                          CompetenceService.getCompetenceLeader(widget.competenceName),
+                      child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: getContactMethods(
+                      CompetenceService.getCompetenceLeader(
+                          widget.competenceName),
                     ),
-                  )
-                  )],
+                  ))
+                ],
               ),
               Container(
                 width: double.infinity,
@@ -329,8 +329,8 @@ class _InformState extends State<Inform> {
                 child: Text(
                   'COMPETENCE MEMBERS',
                   textAlign: TextAlign.center,
-                  style: AppText.bodyOutstandingText
-                      .copyWith(color: Colors.black),
+                  style:
+                      AppText.bodyOutstandingText.copyWith(color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -350,6 +350,5 @@ class _InformState extends State<Inform> {
         ),
       ]),
     );
-
   }
 }

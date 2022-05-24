@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
@@ -30,8 +28,8 @@ class _SearchWidgetState extends State<SearchWidget> {
   Widget build(BuildContext context) {
     final styleActive =
         AppText.bodyOutstandingText.copyWith(fontSize: 18, height: 1);
-    final styleHint = TextStyle(color: AppColors.color6)
-        .copyWith(fontSize: 18, height: 1);
+    final styleHint =
+        TextStyle(color: AppColors.color6).copyWith(fontSize: 18, height: 1);
     final style = widget.text.isEmpty ? styleHint : styleActive;
 
     return Padding(

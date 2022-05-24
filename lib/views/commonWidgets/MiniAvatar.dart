@@ -1,4 +1,3 @@
-
 import 'package:app/services/PeopleService.dart';
 import 'package:app/views/PeopleView.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +23,7 @@ class MiniAvatar extends StatelessWidget {
         builder: (BuildContext context) {
           return new Scaffold(
             appBar: new AppBar(
-              title:
-                  Text('Person info & knowledge', style: AppText.appBar),
+              title: Text('Person info & knowledge', style: AppText.appBar),
               elevation: 15,
               backgroundColor: AppColors.color4,
             ),
@@ -37,7 +35,6 @@ class MiniAvatar extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
-
     return Container(
       width: 90,
       child: Material(
@@ -65,10 +62,9 @@ class MiniAvatar extends StatelessWidget {
                         : null,
                     child: CircleAvatar(
                       radius: 25.0,
-                      backgroundColor:
-                         PeopleService.hasImageById(id)
-                              ? AppColors.color6
-                              : Color(0x00000000),
+                      backgroundColor: PeopleService.hasImageById(id)
+                          ? AppColors.color6
+                          : Color(0x00000000),
                       backgroundImage: PeopleService.getAvatar(id),
                     ),
                   ),

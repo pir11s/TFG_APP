@@ -1,4 +1,3 @@
-
 import 'package:app/services/CompetenceService.dart';
 import 'package:app/services/PeopleService.dart';
 import 'package:app/services/TechnologyService.dart';
@@ -7,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_radar_chart/flutter_radar_chart.dart';
 import 'package:tfg_theme/AppColors.dart';
 import 'package:tfg_theme/AppText.dart';
-
 
 const graphColors = [
   AppColors.color5,
@@ -46,8 +44,7 @@ class _KPIsViewState extends State<KPIsView> {
     if (competencesList.length == 1) {
       for (String competence in CompetenceService.getCompetenceNames()) {
         competencesList.add(competence);
-        if (CompetenceService.getTechnologyCountPerCompetence(competence) >
-            1) {
+        if (CompetenceService.getTechnologyCountPerCompetence(competence) > 1) {
           competencesWithTechnologiesList.add(competence);
         }
       }
@@ -63,37 +60,45 @@ class _KPIsViewState extends State<KPIsView> {
 
   @override
   Widget build(BuildContext context) {
-    const ticks = [50, 150, 250, 350,400];
+    const ticks = [50, 150, 250, 350, 400];
     List<String> features = [];
     List<int> mainValues = [];
     List<int> secondaryValues = [];
     List<int> tertiaryValues = [];
 
-  
-
     if (dropdownValue == defaultDropdownValue) {
       for (String competence in CompetenceService.getCompetenceNames()) {
-         features.add(competence);
-  
-         mainValues.add((CompetenceService.getAverageSkillPerCompetence(competence) 
-           * 100).round());
-        secondaryValues.add((CompetenceService.getAverageIndustryRelevancePerCompetence(competence).toInt()*
-                    100.round()));
-        tertiaryValues.add((CompetenceService.getNumberOfMembersCompetence(competence)
-                      ~/ PeopleService.getNumberOfEmployees()) * 600);
+        features.add(competence);
+
+        mainValues.add(
+            (CompetenceService.getAverageSkillPerCompetence(competence) * 100)
+                .round());
+        secondaryValues.add(
+            (CompetenceService.getAverageIndustryRelevancePerCompetence(
+                        competence)
+                    .toInt() *
+                100.round()));
+        tertiaryValues.add(
+            (CompetenceService.getNumberOfMembersCompetence(competence) ~/
+                    PeopleService.getNumberOfEmployees()) *
+                600);
       }
     } else {
       for (String tech in TechnologyService.getTechnologiesNames()) {
-        if (TechnologyService.getTechnology(tech).competenceName == dropdownValue
-        && TechnologyService.getPeopleCountPerTechnology(tech) > 0) {
+        if (TechnologyService.getTechnology(tech).competenceName ==
+                dropdownValue &&
+            TechnologyService.getPeopleCountPerTechnology(tech) > 0) {
           features.add(tech);
-          mainValues.add((TechnologyService.getAverageSkillForTechnology(
-                      tech) *
-                  100)
-              .round());
-          secondaryValues.add(TechnologyService.getTechnology(tech).industryRelevance * 75);
-          tertiaryValues.add((TechnologyService.getPeopleCountPerTechnology(tech) 
-          / PeopleService.getNumberOfEmployees()*500).toInt());
+          mainValues.add(
+              (TechnologyService.getAverageSkillForTechnology(tech) * 100)
+                  .round());
+          secondaryValues.add(
+              TechnologyService.getTechnology(tech).industryRelevance * 75);
+          tertiaryValues.add(
+              (TechnologyService.getPeopleCountPerTechnology(tech) /
+                      PeopleService.getNumberOfEmployees() *
+                      500)
+                  .toInt());
         }
       }
     }
@@ -165,12 +170,12 @@ class _KPIsViewState extends State<KPIsView> {
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: RadarChart(
                 featuresTextStyle: TextStyle(
-                    fontSize: 16,
-                    height: 1,
-                    fontWeight: FontWeight.bold,
-                    textBaseline: TextBaseline.alphabetic,
-                    color: AppColors.color3,
-                    ),
+                  fontSize: 16,
+                  height: 1,
+                  fontWeight: FontWeight.bold,
+                  textBaseline: TextBaseline.alphabetic,
+                  color: AppColors.color3,
+                ),
                 ticks: ticks,
                 features: features,
                 data: data,
