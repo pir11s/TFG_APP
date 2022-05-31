@@ -22,11 +22,9 @@ import 'package:app/services/LoginService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  
   TestWidgetsFlutterBinding.ensureInitialized();
   group('Models Constructors', () {
     test('CompetenceModel Constructor', () {
-      
       CompetenceModel competenceModel = new CompetenceModel(
           competenceName: "",
           competenceLeader: "",
@@ -79,8 +77,9 @@ void main() {
     });
 
     test('TechnologyUserModel Constructor', () {
-      TechnologyCompetenceModel technologyUserModel = new TechnologyCompetenceModel(
-          competenceName: "", technologyName: "", skillLevel: "");
+      TechnologyCompetenceModel technologyUserModel =
+          new TechnologyCompetenceModel(
+              competenceName: "", technologyName: "", skillLevel: "");
       // ignore: unnecessary_null_comparison
       expect(technologyUserModel != null, true);
     });
@@ -93,11 +92,12 @@ void main() {
     });
   });
 
-
-  group('LoginService', (){
-   
-    test('get saved user',()async  {
-      Map<String, Object> values = <String, Object>{'userName': 'n12345','password':'123'};
+  group('LoginService', () {
+    test('get saved user', () async {
+      Map<String, Object> values = <String, Object>{
+        'userName': 'n12345',
+        'password': '123'
+      };
       SharedPreferences.setMockInitialValues(values);
       await LoginService.getUser();
       await LoginService.getPassword();
@@ -105,126 +105,127 @@ void main() {
       expect(LoginService.user.password == '123', true);
     });
 
-     test('delete saved user',()async  {
-      Map<String, Object> values = <String, Object>{'userName': 'n12345','password':'123'};
+    test('delete saved user', () async {
+      Map<String, Object> values = <String, Object>{
+        'userName': 'n12345',
+        'password': '123'
+      };
       SharedPreferences.setMockInitialValues(values);
       await LoginService.deleteUser();
       expect(LoginService.user.user == '', true);
       expect(LoginService.user.password == '', true);
     });
 
-     test('default values',() {
+    test('default values', () {
       expect(LoginService.user.user == '', true);
       expect(LoginService.user.password == '', true);
       expect(LoginService.hidePassword, true);
     });
 
-    test('change hide password',()  {
+    test('change hide password', () {
       bool actualPassword = LoginService.getHidePassword();
       LoginService.changeHide();
       expect(actualPassword != LoginService.getHidePassword(), true);
     });
 
-    test('change remember me',()  {
+    test('change remember me', () {
       bool rememberMe = LoginService.getRememberMe();
       LoginService.changeRemember();
       expect(rememberMe != LoginService.getRememberMe(), true);
     });
   });
 
-  group('PersonService', (){
-    test('read data',() async{
+  group('PersonService', () {
+    test('read data', () async {
       await PeopleService.readData();
       expect(PeopleService.getNumberOfEmployees() == 85, true);
     });
-    test('build contact methods',() async{
+    test('build contact methods', () async {
       await PeopleService.readData();
       PersonModel p = PeopleService.getEmployeeById('n802418');
       List<Widget> widgets = PeopleService.buildContactMethods(p);
       expect(widgets.length > 0, true);
     });
 
-    test('get Avatar',() async{
+    test('get Avatar', () async {
       await PeopleService.readData();
       AssetImage a = new AssetImage('images/people/n802418.jpg');
       expect(PeopleService.getAvatar('n802418') == a, true);
     });
 
-    test('has image',() async{
+    test('has image', () async {
       await PeopleService.readData();
       expect(PeopleService.hasImageById('n802418') == true, true);
     });
-
-    
   });
 
-  group('TechnologyService', (){
-    test('read data',() async{
+  group('TechnologyService', () {
+    test('read data', () async {
       await TechnologyService.readData();
       expect(TechnologyService.getTechnologiesNames().length == 53, true);
     });
 
-    test('is Expert',() async{
+    test('is Expert', () async {
       await TechnologyService.readData();
       expect(TechnologyService.isExpert('Tech. Lead', 'Lylah Hester'), true);
     });
 
-    test('not Expert',() async{
+    test('not Expert', () async {
       await TechnologyService.readData();
       expect(TechnologyService.isExpert('Banksphere', 'Beverly Harvey'), false);
     });
 
-    test('get Experts',() async{
+    test('get Experts', () async {
       await PeopleService.readData();
       await TechnologyService.readData();
       expect(TechnologyService.getExperts('Banksphere').length > 0, true);
     });
 
-    test('get Average Skill Of Tech',() async{
+    test('get Average Skill Of Tech', () async {
       await TechnologyService.readData();
-      expect(TechnologyService.getAverageSkillOfTechnology('Tech. Lead') > 0, true);
+      expect(TechnologyService.getAverageSkillOfTechnology('Tech. Lead') > 0,
+          true);
     });
 
-     test('get People Count Per Technology',() async{
+    test('get People Count Per Technology', () async {
       await TechnologyService.readData();
-      expect(TechnologyService.getPeopleCountPerTechnology('Tech. Lead') > 0, true);
+      expect(TechnologyService.getPeopleCountPerTechnology('Tech. Lead') > 0,
+          true);
     });
-
   });
 
-  group('CompetenceService', (){
-    test('read data',() async{
+  group('CompetenceService', () {
+    test('read data', () async {
       await CompetenceService.readData();
       expect(CompetenceService.getCompetenceNames().length == 7, true);
     });
 
-    test('get Competences',() async{
+    test('get Competences', () async {
       await CompetenceService.readData();
       expect(CompetenceService.getCompetences().length == 7, true);
     });
 
-    test('get competence Image',() async{
+    test('get competence Image', () async {
       await CompetenceService.readData();
       expect(CompetenceService.getCompetenceImage('GOVERNANCE') != '', true);
     });
 
-    test('get competence Employees',() async{
+    test('get competence Employees', () async {
       await CompetenceService.readData();
-      expect(CompetenceService.getEmployeesOfCompetence('GOVERNANCE').length > 0, true);
+      expect(
+          CompetenceService.getEmployeesOfCompetence('GOVERNANCE').length > 0,
+          true);
     });
 
-    test('get Technology Count Per Competence',() async{
+    test('get Technology Count Per Competence', () async {
       await CompetenceService.readData();
-      expect(CompetenceService.getTechnologyCountPerCompetence('GOVERNANCE') > 0, true);
+      expect(
+          CompetenceService.getTechnologyCountPerCompetence('GOVERNANCE') > 0,
+          true);
     });
-
-
-
   });
 
-  /*
   group('Login View', () {
-  
     testWidgets('Settle credentials and log in', (tester) async {
       Widget testWidget = new MediaQuery(
           data: new MediaQueryData(),
@@ -237,7 +238,7 @@ void main() {
       final findLoginView = find.byWidget(LoginView());
       expect(findLoginView, findsNothing);
     });
-  
+
     testWidgets('creation', (tester) async {
       Widget testWidget = new MediaQuery(
           data: new MediaQueryData(),
@@ -252,90 +253,90 @@ void main() {
     });
 
     testWidgets('try to log without credentials settled', (tester) async {
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(home: new LoginView()));
-      await tester.pumpWidget(testWidget);
-      await tester.tap(find.byType(MaterialButton));
-      await tester.pump();
-      final noUser = find.text('Please enter your password');
-      final noPassword = find.text('Please enter your password');
-      expect(noUser, findsOneWidget);
-      expect(noPassword, findsOneWidget);
+      await tester.runAsync(() async {
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(home: new LoginView()));
+        await tester.pumpWidget(testWidget);
+        await tester.tap(find.byType(MaterialButton));
+        await tester.pump();
+        final noUser = find.text('Please enter your password');
+        final noPassword = find.text('Please enter your password');
+        expect(noUser, findsOneWidget);
+        expect(noPassword, findsOneWidget);
+      });
     });
-
-  
   });
 
   group('People View', () {
     testWidgets('creation', (tester) async {
       await tester.runAsync(() async {
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: PeopleView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        final searchFinder = find.byType(SearchWidget);
+        final listTileFinder = find.byType(ListTile);
+        expect(searchFinder, findsOneWidget);
+        expect(listTileFinder, findsWidgets);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: PeopleView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      final searchFinder = find.byType(SearchWidget);
-      final listTileFinder = find.byType(ListTile);
-      expect(searchFinder, findsOneWidget);
-      expect(listTileFinder, findsWidgets);
     });
 
     testWidgets('search for user', (tester) async {
       await tester.runAsync(() async {
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: PeopleView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.enterText(find.byType(SearchWidget).at(0), 'a');
+        await tester.pumpAndSettle();
+        final noUser = find.text('a');
+        expect(noUser, findsWidgets);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: PeopleView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.enterText(find.byType(SearchWidget).at(0), 'doyl');
-      await tester.pumpAndSettle();
-      final noUser = find.text('DOYLE TOBY');
-      expect(noUser, findsOneWidget);
     });
 
     testWidgets('user not found', (tester) async {
       await tester.runAsync(() async {
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: PeopleView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.enterText(find.byType(SearchWidget).at(0), '24y');
+        await tester.pumpAndSettle();
+        final noUser = find.text('DOYLE TOBY');
+        expect(noUser, findsNothing);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: PeopleView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.enterText(find.byType(SearchWidget).at(0), '24y');
-      await tester.pumpAndSettle();
-      final noUser = find.text('DOYLE TOBY');
-      expect(noUser, findsNothing);
     });
 
     testWidgets('navigate to details', (tester) async {
       await tester.runAsync(() async {
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: PeopleView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.enterText(find.byType(SearchWidget).at(0), 'doyl');
+        await tester.pumpAndSettle();
+        await tester.tap(find.byType(ListTile).at(0));
+        await tester.pumpAndSettle();
+        expect(find.byType(PeopleView), findsNothing);
+        expect(find.byType(PersonDetailView), findsOneWidget);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: PeopleView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.enterText(find.byType(SearchWidget).at(0), 'doyl');
-      await tester.pumpAndSettle();
-      await tester.tap(find.byType(ListTile));
-      await tester.pumpAndSettle();
-      expect(find.byType(PeopleView), findsNothing);
-      expect(find.byType(PersonDetailView), findsOneWidget);
     });
   });
 
@@ -344,36 +345,36 @@ void main() {
       await tester.runAsync(() async {
         await CompetenceService.readData();
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: CompetencesView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        final imageFinder = find.byType(Image);
+        final textFinder = find.byType(ExpandableText);
+        expect(imageFinder, findsWidgets);
+        expect(textFinder, findsWidgets);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: CompetencesView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      final imageFinder = find.byType(Image);
-      final textFinder = find.byType(ExpandableText);
-      expect(imageFinder, findsWidgets);
-      expect(textFinder, findsWidgets);
     });
 
     testWidgets('tap on details', (tester) async {
       await tester.runAsync(() async {
         await PeopleService.readData();
         await CompetenceService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: CompetencesView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.tap(find.byType(MaterialButton).at(0));
+        await tester.pumpAndSettle();
+        expect(find.byType(CompetencesView), findsNothing);
+        expect(find.byType(CompetenceDetailView), findsOneWidget);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: CompetencesView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.tap(find.byType(MaterialButton).at(0));
-      await tester.pumpAndSettle();
-      expect(find.byType(CompetencesView), findsNothing);
-      expect(find.byType(CompetenceDetailView), findsOneWidget);
     });
   });
 
@@ -382,19 +383,19 @@ void main() {
       await tester.runAsync(() async {
         await TechnologyService.readData();
         await PeopleService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: TechnologyView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.pumpAndSettle();
+        final textFinder = find.byType(Text);
+        final gestureFinder = find.byType(GestureDetector);
+        expect(gestureFinder, findsWidgets);
+        expect(textFinder, findsWidgets);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: TechnologyView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.pumpAndSettle();
-      final textFinder = find.byType(Text);
-      final gestureFinder = find.byType(GestureDetector);
-      expect(gestureFinder, findsWidgets);
-      expect(textFinder, findsWidgets);
     });
   });
 
@@ -404,18 +405,17 @@ void main() {
         await TechnologyService.readData();
         await PeopleService.readData();
         await CompetenceService.readData();
+        Widget testWidget = new MediaQuery(
+            data: new MediaQueryData(),
+            child: new MaterialApp(
+                home: Material(
+              child: KPIsView(),
+            )));
+        await tester.pumpWidget(testWidget);
+        await tester.pumpAndSettle();
+        final radarFinder = find.byType(RadarChart);
+        expect(radarFinder, findsOneWidget);
       });
-      Widget testWidget = new MediaQuery(
-          data: new MediaQueryData(),
-          child: new MaterialApp(
-              home: Material(
-            child: KPIsView(),
-          )));
-      await tester.pumpWidget(testWidget);
-      await tester.pumpAndSettle();
-      final radarFinder = find.byType(RadarChart);
-      expect(radarFinder, findsOneWidget);
     });
   });
-  */
 }
