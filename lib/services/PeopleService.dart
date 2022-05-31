@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:app/models/TechnologyUserModel.dart';
+import 'package:app/models/TechnologyCompetenceModel.dart';
 import 'package:app/models/json/Details.dart';
 import 'package:app/models/json/Employees.dart';
 import 'package:app/models/json/EmployeesImages.dart';
@@ -76,7 +76,7 @@ class PeopleService {
         EmployeesTechnologies.fromJson(jsonDecode(responseEmployeeTech));
     for (EmployeeTechnology e in employeesTechnologies.employeesTechnologies!) {
       PersonModel p = _mapEmployeesByName[e.employeeName!.toUpperCase()]!;
-      p.technologies.add(new TechnologyUserModel(
+      p.technologies.add(new TechnologyCompetenceModel(
           competenceName: e.competenceName!,
           technologyName: e.technology!,
           skillLevel: e.skillLevel!));
@@ -160,14 +160,16 @@ class PeopleService {
   static List<Widget> getUserTechnologyList(
       String id, PersonModel person, BuildContext context) {
     List<Widget> tagList = [];
-
-    for (TechnologyUserModel t in person.technologies) {
-      tagList.add(GestureDetector(
+    Map<String,String> map = {};
+    for (TechnologyCompetenceModel t in person.technologies) {
+      if (map.containsKey(t.technologyName.toUpperCase()) == false) {
+        map.addAll({t.technologyName.toUpperCase():t.technologyName.toUpperCase()});
+        tagList.add(GestureDetector(
         onTap: () {
           NavigateService.navigateDetailTechnology(t.technologyName, context);
         },
         child: Hero(
-          tag: "technology-${t.technologyName}",
+          tag: "technology-${t.technologyName}-${person.id}",
           child: Material(
             color: Color(0x00000000),
             child: SanChip(
@@ -176,6 +178,8 @@ class PeopleService {
           ),
         ),
       ));
+      }
+      
     }
 
     return tagList;

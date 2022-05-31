@@ -90,7 +90,7 @@ class _KPIsViewState extends State<KPIsView> {
             TechnologyService.getPeopleCountPerTechnology(tech) > 0) {
           features.add(tech);
           mainValues.add(
-              (TechnologyService.getAverageSkillForTechnology(tech) * 100)
+              (TechnologyService.getAverageSkillOfTechnology(tech) * 100)
                   .round());
           secondaryValues.add(
               TechnologyService.getTechnology(tech).industryRelevance * 75);

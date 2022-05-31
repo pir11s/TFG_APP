@@ -93,15 +93,6 @@ class TechnologyService {
     return technologies[tech]!;
   }
 
-  static double getAverageSkillForTechnology(String tech) {
-    double value = 0;
-
-    technologyKnowledges[tech]!.forEach((element) {
-      value += int.parse(element.skillLevel[0]);
-    });
-    return value / technologyKnowledges[tech]!.length;
-  }
-
   static List<Widget> getExperts(technologyName) {
     List<Widget> tagList = [];
     Set<String> users = {};

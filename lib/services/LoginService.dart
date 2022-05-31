@@ -7,7 +7,6 @@ class LoginService {
   static bool rememberMe = false;
   static bool hidePassword = true;
   static RegExp userPattern = RegExp('n{1}[0-9]{5}');
-
   LoginService._();
 
   static bool authenticateUser() {
@@ -34,12 +33,12 @@ class LoginService {
 
   static getUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    user.user = (prefs.getString('userName') ?? '');
+    user.user = (prefs.getString('userName') ?? 'a');
   }
 
   static getPassword() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    user.password = (prefs.getString('password') ?? '');
+    user.password = (prefs.getString('password') ?? 'b');
   }
 
   static void setUser(String newUser) {
@@ -52,8 +51,10 @@ class LoginService {
 
   static Future deleteUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString('user', '');
+    prefs.setString('userName', '');
     prefs.setString('password', '');
+    setUser('');
+    setPassword('');
   }
 
   static bool checkUserPatternOK(String user) {

@@ -1,5 +1,5 @@
 
-import 'package:app/models/TechnologyUserModel.dart';
+import 'package:app/models/TechnologyCompetenceModel.dart';
 
 ///Login information
 ///
@@ -19,7 +19,7 @@ class PersonModel {
   String id;
   String competence;
   String function;
-  List<TechnologyUserModel> technologies;
+  List<TechnologyCompetenceModel> technologies;
   String image;
   String businessPhone;
   PersonModel({required this.user, required this.displayName,required this.jobTitle,required this.mail, required this.mobilePhone,
