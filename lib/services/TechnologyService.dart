@@ -50,13 +50,7 @@ class TechnologyService {
     }
   }
 
-  static List<String> getCompetenceNames() {
-    List<String> competenceNames = [];
-    competenceTechnologies.forEach((key, value) {
-      competenceNames.add(key);
-    });
-    return competenceNames;
-  }
+  
 
   static int getPeopleCountPerTechnology(String technology) {
     return technologyKnowledges[technology]!.length;

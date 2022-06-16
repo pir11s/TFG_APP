@@ -1,3 +1,4 @@
+import 'package:app/services/CompetenceService.dart';
 import 'package:app/services/TechnologyService.dart';
 import 'package:flutter/material.dart';
 import 'package:tfg_theme/AppColors.dart';
@@ -21,7 +22,7 @@ class _TechnologiesViewState extends State<TechnologyView> {
   String dropdownValue = defaultDropdownValue;
   @override
   void initState() {
-    competencesList.addAll(TechnologyService.getCompetenceNames());
+    competencesList.addAll(CompetenceService.getCompetenceNames());
     super.initState();
   }
 

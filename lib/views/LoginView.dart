@@ -17,8 +17,8 @@ class _LoginViewState extends State<LoginView> {
   void initState() {
     super.initState();
     WidgetsBinding.instance?.addPostFrameCallback((_) async {
-      await LoginService.getPassword();
-      await LoginService.getUser();
+      await LoginService.recoverUsernameData();
+      await LoginService.recoverPasswordData();
 
       setState(() {});
     });
@@ -29,6 +29,20 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       body: Stack(
         children: [
+          Padding(
+            padding: const EdgeInsets.only(),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 15.0),
+              child: Center(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: LoginService.getPlatform()),
+              ),
+            ),
+          ),
+
           Form(
               key: _formKey,
               child: Column(
@@ -131,7 +145,6 @@ class _LoginViewState extends State<LoginView> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Checkbox(
-                              //todo
                               value: LoginService.getRememberMe(),
                               onChanged: (_) {
                                 setState(() {
@@ -163,7 +176,10 @@ class _LoginViewState extends State<LoginView> {
                                           if (LoginService.authenticateUser()) {
                                             if (LoginService.getRememberMe() ==
                                                 true) {
-                                            } else {}
+                                                  LoginService.saveUserData();
+                                            } else {
+                                              LoginService.deleteUserData();
+                                            }
                                             NavigateService
                                                 .navigateWithFadeWithReplacement(
                                                     context,

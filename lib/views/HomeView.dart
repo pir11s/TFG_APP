@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(Icons.logout),
                 onPressed: () {
                   WidgetsBinding.instance!.addPostFrameCallback((_) async {
-                    await LoginService.deleteUser();
+                    await LoginService.deleteUserData();
                     NavigateService.navigateWithFadeWithReplacement(context,
                         objective: LoginView());
                   });

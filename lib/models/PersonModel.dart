@@ -1,10 +1,6 @@
 
 import 'package:app/models/TechnologyCompetenceModel.dart';
 
-///Login information
-///
-/// - String user: user identifier. ex: n123456
-/// - String password: user password
 class PersonModel {
 
   String user;

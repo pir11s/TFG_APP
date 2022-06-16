@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:tfg_theme/AppColors.dart';
+import 'package:universal_platform/universal_platform.dart';
 import '../models/LoginModel.dart';
 
 class LoginService {
@@ -21,7 +23,7 @@ class LoginService {
     hidePassword = !hidePassword;
   }
 
-  static void saveUser() async {
+  static void saveUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('userName', user.user);
     prefs.setString('password', user.password);
@@ -31,14 +33,14 @@ class LoginService {
     return user;
   }
 
-  static getUser() async {
+  static recoverUsernameData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    user.user = (prefs.getString('userName') ?? 'a');
+    user.user = (prefs.getString('userName') ?? '');
   }
 
-  static getPassword() async {
+  static recoverPasswordData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    user.password = (prefs.getString('password') ?? 'b');
+    user.password = (prefs.getString('password') ?? '');
   }
 
   static void setUser(String newUser) {
@@ -49,7 +51,7 @@ class LoginService {
     user.password = newPassword;
   }
 
-  static Future deleteUser() async {
+  static Future deleteUserData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString('userName', '');
     prefs.setString('password', '');
@@ -72,4 +74,33 @@ class LoginService {
   static bool getHidePassword() {
     return hidePassword;
   }
+
+  static List<Widget> getPlatform() {
+      if (UniversalPlatform.isAndroid) {
+        return <Widget>[
+          Icon(
+            Icons.fingerprint,
+            size: 36,
+          ),
+          Text(
+            'Access by placing your fingerprint on the sensor',
+            style: TextStyle(color: AppColors.color1),
+          )
+        ];
+      } else if (UniversalPlatform.isIOS) {
+        return <Widget>[
+          Image(
+            image: ResizeImage(AssetImage('images/icons/ios_log_icon.png'),
+                height: 36, width: 36),
+          ),
+          Text(
+            'Access with face Id',
+            style: TextStyle(color: AppColors.color1),
+          )
+        ];
+      } else {
+        return <Widget>[SizedBox(height: 0)];
+      }
+    }
+
 }

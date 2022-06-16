@@ -99,8 +99,8 @@ void main() {
         'password': '123'
       };
       SharedPreferences.setMockInitialValues(values);
-      await LoginService.getUser();
-      await LoginService.getPassword();
+      await LoginService.recoverUsernameData();
+      await LoginService.recoverPasswordData();
       expect(LoginService.user.user == 'n12345', true);
       expect(LoginService.user.password == '123', true);
     });
@@ -111,7 +111,7 @@ void main() {
         'password': '123'
       };
       SharedPreferences.setMockInitialValues(values);
-      await LoginService.deleteUser();
+      await LoginService.deleteUserData();
       expect(LoginService.user.user == '', true);
       expect(LoginService.user.password == '', true);
     });
